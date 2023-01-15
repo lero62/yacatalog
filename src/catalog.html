@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Catalog"
+})
+
+<body class="loaded bg-default">
+	<!-- BEGIN main wrapper -->
+	<div class="main-wrapper">
+
+		<!-- BEGIN HEADER -->
+		@@include('./template/_header.html', {
+		"nav": 0,
+		"user": 0,
+		})
+		<!-- HEADER EOF   -->
+
+		<!-- BEGIN MAIN -->
+		<main class="main">
+
+			<div class="container-lg">
+				<nav style="--bs-breadcrumb-divider: url(../img/crumbs-arrow.svg);" aria-label="breadcrumb">
+					<ol class="breadcrumb l-breadcrumb">
+						<li class="breadcrumb-item"><a href="#">Каталог</a></li>
+						<li class="breadcrumb-item"><a href="#">Электроника</a></li>
+						<li class="breadcrumb-item"><a href="#">Тв, видео</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Телевизоры</li>
+					</ol>
+				</nav>
+
+				<div class="row g-2">
+					<div class="col-lg-9">
+						<div class="panel d-flex justify-content-end align-items-center flex-wrap">
+							<div class="panel__sorting sorting dropdown">
+								<span class="dropdown-toggle" data-bs-toggle="dropdown">Сортировать</span>
+								<ul class="dropdown-menu dropdown-menu-end l-dropdown-menu">
+									<li><a class="dropdown-item" href="#">увеличению цены</a></li>
+									<li><a class="dropdown-item" href="#">уменьшению цены</a></li>
+									<li><a class="dropdown-item" href="#">рейтингу</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3">
+						<div class="filter" data-spollers>
+							<div class="filter__item ">
+								<div class="filter__head _active" data-spoller>
+									<div class="filter__title">Категории</div>
+								</div>
+								<div class="filter__body">
+									<ul class="filter__list">
+										<li>
+											<a href="#">3D телевизоры</a>
+										</li>
+										<li>
+											<a href="#">OLED телевизоры</a>
+										</li>
+										<li>
+											<a href="#">Цифровые телевизоры</a>
+										</li>
+										<li>
+											<a href="#">Плазменные телевизоры</a>
+										</li>
+										<li>
+											<a href="#">ЖК-телевизоры</a>
+										</li>
+										<li>
+											<a href="#">HD телевизоры</a>
+										</li>
+										<li>
+											<a href="#">Телевизоры 4к</a>
+										</li>
+										<li>
+											<a href="#">Телевизоры Full HD</a>
+										</li>
+										<li>
+											<a href="#">Телевизоры SMART TV Телевизоры Ultra HD</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="filter__item ">
+								<div class="filter__head " data-spoller>
+									<div class="filter__title">Цена</div>
+								</div>
+								<div class="filter__body">
+									<div class="range">
+										<div class="range__row">
+											<div class="range__label">от </div>
+											<div class="range__item">
+												<input type="text" id="rangefrom" value="10000" />
+											</div>
+											<div class="range__label">до </div>
+											<div class="range__item">
+												<input type="text" id="rangeto" value="50000" />
+											</div>
+										</div>
+										<div id="range" class="range-scroll"></div>
+									</div>
+								</div>
+							</div>
+							<div class="filter__item ">
+								<div class="filter__head " data-spoller>
+									<div class="filter__title">Производитель</div>
+								</div>
+								<div class="filter__body" style="display: none;">
+									<ul class="filter__check-list">
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" />
+												<span class="checkbox__text">samsung</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" />
+												<span class="checkbox__text">lg</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" />
+												<span class="checkbox__text">sony</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" />
+												<span class="checkbox__text">telefunken</span>
+											</label>
+										</li>
+										<li>
+											<label class="checkbox">
+												<input type="checkbox" />
+												<span class="checkbox__text">bbk</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="filter__item ">
+								<div class="filter__head " data-spoller>
+									<div class="filter__title">Разрешение экрана</div>
+								</div>
+								<div class="filter__body" style="display: none;">
+									<p>11111</p>
+								</div>
+							</div>
+
+							<div class="filter__item ">
+								<div class="filter__head " data-spoller>
+									<div class="filter__title">Производитель</div>
+								</div>
+								<div class="filter__body" style="display: none;">
+									<p>11111</p>
+								</div>
+							</div>
+
+							<div class="filter__item ">
+								<div class="filter__head " data-spoller>
+									<div class="filter__title">Тип</div>
+								</div>
+								<div class="filter__body" style="display: none;">
+									<p>11111</p>
+								</div>
+							</div>
+
+							<div class="filter__buttons">
+								<button class="l-btn">Показать все</button>
+								<button class="l-btn l-bth--gradient">Фильтровать</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<!-- MAIN EOF   -->
+
+		<!-- BEGIN FOOTER -->
+		@@include('./template/_footer.html', {})
+		<!-- FOOTER EOF   -->
+
+	</div>
+	<!-- main wrapper EOF   -->
+
+	<!-- BEGIN POPUPS -->
+	@@include('./template/popups/callback.html')
+	@@include('./template/navbar/navbar.html')
+	<!-- POPUPS EOF   -->
+
+	@@include('./template/_js.html', {})
+
+</body>
+
+</html>

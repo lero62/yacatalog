@@ -1,134 +1,192 @@
 <div class="offcanvas offcanvas-start" id="navbar-catalog">
 	<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 	<div class="offcanvas-body">
-		<div class="navbar-catalog">
+		<div class="navbar-catalog" data-catalog-wrapper>
 			<div class="navbar-catalog__side scrollbar">
+
 				<ul class="nc-nav">
-					<li class="nc-nav__item _active">
-						<a href="#" class="nc-nav__link">Одежда и обувь</a>
+					<li class="nc-nav__item ">
+						<span class="nc-nav__link" data-catalog-target="0">Одежда и обувь</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Электроника</a>
+						<span class="nc-nav__link" data-catalog-target="1">Электроника</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Детские товары</a>
+						<span class="nc-nav__link" data-catalog-target="2">Детские товары</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Часы</a>
+						<span class="nc-nav__link" data-catalog-target="3">Часы</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Для дома и сада</a>
+						<span class="nc-nav__link" data-catalog-target="4">Для дома и сада</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Красота и здоровье</a>
+						<span class="nc-nav__link" data-catalog-target="5">Красота и здоровье</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Спорт и Хобби</a>
+						<span class="nc-nav__link" data-catalog-target="6">Спорт и Хобби</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Мебель</a>
+						<span class="nc-nav__link" data-catalog-target="7">Мебель</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Строительные материалы</a>
+						<span class="nc-nav__link" data-catalog-target="8">Строительные материалы</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Все для авто</a>
+						<span class="nc-nav__link" data-catalog-target="9">Все для авто</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Книги</a>
+						<span class="nc-nav__link" data-catalog-target="10">Книги</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Техника для дома</a>
+						<span class="nc-nav__link" data-catalog-target="11">Техника для дома</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Ювелирные изделия</a>
+						<span class="nc-nav__link" data-catalog-target="12">Ювелирные изделия</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Развлечения</a>
+						<span class="nc-nav__link" data-catalog-target="13">Развлечения</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Животные</a>
+						<span class="nc-nav__link" data-catalog-target="14">Животные</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Музыкальные инструменты</a>
+						<span class="nc-nav__link" data-catalog-target="15">Музыкальные инструменты</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Товары для животных</a>
+						<span class="nc-nav__link" data-catalog-target="16">Товары для животных</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Разное</a>
+						<span class="nc-nav__link" data-catalog-target="17">Разное</span>
 					</li>
 					<li class="nc-nav__item">
-						<a href="#" class="nc-nav__link">Сельхозтехника</a>
+						<span class="nc-nav__link" data-catalog-target="18">Сельхозтехника</span>
 					</li>
 
 				</ul>
 			</div>
 
-			<div class="navbar-catalog__content scrollbar">
-				<div class="nc-grid">
-					<div class="nc-grid__item">
-						<div class="ncg-title">Обувь</div>
-						<ul class="ncg-nav">
-							<li><a href="#">Женская обувь</a></li>
-							<li><a href="#">Угги</a></li>
-							<li><a href="#">Сандалии</a></li>
-							<li><a href="#">Туфли</a></li>
-
-						</ul>
+			<div class="navbar-catalog__content  " data-catalog="0">
+				<div class="navbar-catalog__content-body scrollbar">
+					<div class="nc-header" data-catalog-back>
+						<svg class="icon icon-arrow-left">
+							<use xlink:href="img/sprite.svg#arrow-left"></use>
+						</svg>
+						<span>Главное меню</span>
 					</div>
-					<div class="nc-grid__item">
-						<div class="ncg-title">Обувь</div>
-						<ul class="ncg-nav">
-							<li><a href="#">Женская обувь</a></li>
-							<li><a href="#">Угги</a></li>
-							<li><a href="#">Сандалии</a></li>
-							<li><a href="#">Туфли</a></li>
+					<div class="nc-grid">
+						<div class="nc-grid__item">
+							<div class="ncg-title">Обувь</div>
+							<ul class="ncg-nav">
+								<li><a href="#">Женская обувь</a></li>
+								<li><a href="#">Угги</a></li>
+								<li><a href="#">Сандалии</a></li>
+								<li><a href="#">Туфли</a></li>
 
-						</ul>
-					</div>
-					<div class="nc-grid__item">
-						<div class="ncg-title">Обувь</div>
-						<ul class="ncg-nav">
-							<li><a href="#">Женская обувь</a></li>
-							<li><a href="#">Угги</a></li>
-							<li><a href="#">Сандалии</a></li>
-							<li><a href="#">Туфли</a></li>
+							</ul>
+						</div>
+						<div class="nc-grid__item">
+							<div class="ncg-title">Обувь</div>
+							<ul class="ncg-nav">
+								<li><a href="#">Женская обувь</a></li>
+								<li><a href="#">Угги</a></li>
+								<li><a href="#">Сандалии</a></li>
+								<li><a href="#">Туфли</a></li>
 
-						</ul>
-					</div>
-					<div class="nc-grid__item">
-						<div class="ncg-title">Обувь</div>
-						<ul class="ncg-nav">
-							<li><a href="#">Женская обувь</a></li>
-							<li><a href="#">Угги</a></li>
-							<li><a href="#">Сандалии</a></li>
-							<li><a href="#">Туфли</a></li>
+							</ul>
+						</div>
+						<div class="nc-grid__item">
+							<div class="ncg-title">Обувь</div>
+							<ul class="ncg-nav">
+								<li><a href="#">Женская обувь</a></li>
+								<li><a href="#">Угги</a></li>
+								<li><a href="#">Сандалии</a></li>
+								<li><a href="#">Туфли</a></li>
 
-						</ul>
-					</div>
-					<div class="nc-grid__item">
-						<div class="ncg-title">Обувь</div>
-						<ul class="ncg-nav">
-							<li><a href="#">Женская обувь</a></li>
-							<li><a href="#">Угги</a></li>
-							<li><a href="#">Сандалии</a></li>
-							<li><a href="#">Туфли</a></li>
+							</ul>
+						</div>
+						<div class="nc-grid__item">
+							<div class="ncg-title">Обувь</div>
+							<ul class="ncg-nav">
+								<li><a href="#">Женская обувь</a></li>
+								<li><a href="#">Угги</a></li>
+								<li><a href="#">Сандалии</a></li>
+								<li><a href="#">Туфли</a></li>
 
-						</ul>
-					</div>
-					<div class="nc-grid__item">
-						<div class="ncg-title">Обувь</div>
-						<ul class="ncg-nav">
-							<li><a href="#">Женская обувь</a></li>
-							<li><a href="#">Угги</a></li>
-							<li><a href="#">Сандалии</a></li>
-							<li><a href="#">Туфли</a></li>
+							</ul>
+						</div>
+						<div class="nc-grid__item">
+							<div class="ncg-title">Обувь</div>
+							<ul class="ncg-nav">
+								<li><a href="#">Женская обувь</a></li>
+								<li><a href="#">Угги</a></li>
+								<li><a href="#">Сандалии</a></li>
+								<li><a href="#">Туфли</a></li>
 
-						</ul>
+							</ul>
+						</div>
+						<div class="nc-grid__item">
+							<div class="ncg-title">Обувь</div>
+							<ul class="ncg-nav">
+								<li><a href="#">Женская обувь</a></li>
+								<li><a href="#">Угги</a></li>
+								<li><a href="#">Сандалии</a></li>
+								<li><a href="#">Туфли</a></li>
+
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
+
+			<div class="navbar-catalog__content " data-catalog="1">
+				<div class="navbar-catalog__content-body scrollbar">
+					<div class="nc-header" data-catalog-back>
+						<svg class="icon icon-arrow-left">
+							<use xlink:href="img/sprite.svg#arrow-left"></use>
+						</svg>
+						<span>Главное меню</span>
+					</div>
+					<div class="nc-grid">
+						<div class="nc-grid__item">
+							<div class="ncg-title">Электроника</div>
+							<ul class="ncg-nav">
+								<li><a href="#">Женская обувь</a></li>
+								<li><a href="#">Угги</a></li>
+								<li><a href="#">Сандалии</a></li>
+								<li><a href="#">Туфли</a></li>
+
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="navbar-catalog__content " data-catalog="2">
+				<div class="navbar-catalog__content-body scrollbar">
+					<div class="nc-header" data-catalog-back>
+						<svg class="icon icon-arrow-left">
+							<use xlink:href="img/sprite.svg#arrow-left"></use>
+						</svg>
+						<span>Главное меню</span>
+					</div>
+					<div class="nc-grid">
+						<div class="nc-grid__item">
+							<div class="ncg-title">Детские товары</div>
+							<ul class="ncg-nav">
+								<li><a href="#">Женская обувь</a></li>
+								<li><a href="#">Угги</a></li>
+								<li><a href="#">Сандалии</a></li>
+								<li><a href="#">Туфли</a></li>
+
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>
