@@ -1,0 +1,339 @@
+.main-wrapper
+	padding: 0
+	min-width: rem(320)
+	position: relative
+	overflow: hidden
+	opacity: 1
+	z-index: 2
+	flex: 1 1 auto
+	display: flex
+	flex-flow: column nowrap
+	min-height: 100vh
+	width: 100%
+
+.main
+	width: 100%
+	min-width: rem(320)
+	text-align: left
+	flex: 1 1 auto
+
++min($laptop + 1)
+	.container-lg
+		max-width: 1206px !important
+
+.section
+	margin-top: 30px
+	margin-bottom: 86px
+	&__head
+		margin-bottom: 53px
+	&__title
+		font-size: 24px
+		font-weight: 600
+
+/* Categories */
+/* --------------------------------------------------------------- */
+.section-categories
+	padding: 42px 0
+	background: #EBF1F1
+
+.categories-swiper
+	margin-left: -42px !important
+	margin-right: -42px !important
+
++min($ipad + 1)
+	.categories-swiper
+		.swiper-wrapper
+			flex-wrap: wrap
+			gap: 45px 0
+	.categories
+		&__item
+			width: 16.666% !important
+
+			padding-left: 10px
+			padding-right: 10px
+
+.cat-box
+	text-align: center
+	text-decoration: none
+	color: $color
+
+	&__icon
+		width: 122px
+		height: 122px
+		margin: 0 auto 15px auto
+		padding: 20px
+		background: #FFFFFF
+		box-shadow: 0px 10px 40px rgba(214, 226, 228, 0.8)
+		border-radius: 20px
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			max-height: 100%
+	&__title
+		font-size: 14px
+		font-weight: 500
+		overflow: hidden
+		text-overflow: ellipsis
+
+	&:hover
+		color: $color
+
+/* Products */
+/* --------------------------------------------------------------- */
+.product-card
+	border: 1px solid rgba(214, 226, 228, 0.8)
+	height: 100%
+	display: flex
+	flex-direction: column
+	&__img
+		padding: 20px 16px
+
+		a
+			padding-bottom: 82.14%
+			position: relative
+			display: block
+		img
+			margin-left: auto
+			margin-right: auto
+			max-height: 100%
+			max-width: 100%
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50% )
+
+	&__actions
+		margin-top: 10px
+		text-align: center
+
+	&__body
+		padding: 16px
+		flex: 1 1 auto
+		display: flex
+		flex-direction: column
+
+	&__title
+		display: block
+		text-decoration: none
+		color: #545454
+		font-size: 14px
+		font-weight: 600
+		line-height: 1.3
+		flex: 1 1 auto
+		+ellipsis(3)
+		&:hover
+			color: $color
+
+	&__price
+		margin-top: 10px
+		.price-value
+			font-size: 20px
+			font-weight: 600
+			line-height: 1.2
+
+	&__button
+		margin-top: 20px
+		text-align: center
+.action-btn
+	width: 41px
+	height: 41px
+	background: #FFFFFF
+	box-shadow: 0px 10px 20px #D6E2E4
+	border-radius: 50%
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	.icon
+		font-size: 21px
+		color: #606060
+		&-heart
+			top: 1px
+		&-statistic
+			font-size: 17px
+	&._active
+		.icon
+			color: $color-danger !important
+	&:hover
+		.icon
+			color: $color
+
+/* Article */
+/* --------------------------------------------------------------- */
+
+.article-card
+	&__img
+		margin-bottom: 18px
+		display: block
+		a
+			display: block
+			text-decoration: none
+
+		img
+			width: 100%
+	&__date
+		margin-bottom: 5px
+		display: inline-block
+	&__title
+		display: block
+		+ellipsis(3)
+		line-height: 1.35
+		text-decoration: none
+		font-size: 16px
+		font-weight: 600
+		color: $color
+		&:hover
+			color: $color-danger
+
+.date
+	color: $color-danger
+	font-size: 14px
+	font-weight: 500
+
+/* Media */
+/* --------------------------------------------------------------- */
+
+/* Desktop =========================*/
++min($desktop + 1)
+	.visible-desktop
+		display: none !important
++max($desktop)
+	.hidden-desktop
+		display: none !important
+
+/* Laptop =========================*/
++min($laptop + 1)
+	.visible-laptop
+		display: none !important
++max($laptop)
+	.hidden-laptop
+		display: none !important
+
+	.section__head
+		margin-bottom: 30px
+
+	.categories-swiper
+		margin-left: -20px !important
+		margin-right: -20px !important
+
+/* Ipad ===========================*/
++min($ipad + 1)
+	.visible-ipad
+		display: none !important
++max($ipad)
+	.hidden-ipad
+		display: none !important
+	.section
+		margin-bottom: 60px
+	/* Categories */
+	.section-categories
+		padding: 20px 0
+	.categories-swiper
+		margin-left: -15px !important
+		margin-right: -15px !important
+		padding-left: 15px !important
+		padding-right: 15px !important
+		.swiper-slide
+			width: 110px !important
+
+	.cat-box
+		&__icon
+			width: 100px
+			height: 100px
+			margin-bottom: 10px
+			box-shadow: 0px 5px 20px rgba(214, 226, 228, 0.8)
+		&__title
+			font-size: 12px
+			line-height: 1.2
+
+/* Mobile =========================*/
++min($iphone + 1)
+	.visible-iphone
+		display: none !important
++max($iphone)
+	.hidden-iphone
+		display: none !important
+
+	.section
+		margin-bottom: 40px
+		&__head
+			margin-bottom: 20px
+		&__title
+			font-size: 20px
+	/* Categories */
+	.section-categories
+		padding: 15px 0
+	.categories-swiper
+
+		.swiper-slide
+			width: 90px !important
+
+	.cat-box
+		&__icon
+			width: 80px
+			height: 80px
+			margin-bottom: 10px
+			padding: 15px
+			box-shadow: 0px 2px 10px rgba(214, 226, 228, 0.8)
+		&__title
+			font-size: 11px
+			line-height: 1.2
+
+	/* Articles */
+
+	.article-card
+		&__img
+			margin-bottom: 10px
+
+/* Mobile sm ======================*/
++min($iphone_sm + 1)
+	.visible-iphone-sm
+		display: none !important
++max($iphone_sm)
+	body
+		font-size: 14px !important
+	.hidden-iphone-sm
+		display: none !important
+
+	.product-card
+		&__img
+			padding: 10px
+		&__body
+			padding: 10px
+		&__title
+			font-size: 12px
+		&__price
+			.price-value
+				font-size: 16px
+		&__actions
+			margin-top: 0
+		&__button
+			margin-top: 10px
+			.l-btn
+				height: 30px
+				font-size: 12px
+
+	.action-btn
+		height: 32px
+		width: 32px
+		box-shadow: 0px 5px 10px #d6e2e4
+		.icon
+			font-size: 18px
+			&-statistic
+				font-size: 14px
+
+	.article-card
+		&__title
+			font-size: 14px
+
+	.date
+		font-size: 12px
+
+/* Mobile xs ======================*/
++min($iphone_xs + 1)
+	.visible-iphone-xs
+		display: none !important
++max($iphone_xs)
+	.hidden-iphone-xs
+		display: none !important

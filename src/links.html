@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('./template/_head.html', {
+"title": "Links"
+})
+
+<body class="loaded">
+	<style>
+		.main-links .wrapper {
+			max-width: 1200px;
+			padding: 40px;
+			margin: 0 auto;
+		}
+
+		.main-links ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.main-links li {
+			margin-bottom: 10px;
+		}
+
+		.main-links a {
+			color: #333;
+			font-size: 16px;
+			line-height: 20px;
+			text-decoration: underline;
+		}
+
+		.main-links a:hover {
+			color: #333;
+			text-decoration: none;
+		}
+
+		.main-links h2 {
+			width: 100%;
+			font-size: 30px;
+			line-height: 60px;
+			color: #333;
+		}
+	</style>
+
+	<div class="main-wrapper">
+		<div class="main main-links">
+			<div class="wrapper">
+
+				<h2>Links</h2>
+				<div class="ul-wrap">
+					<ul>
+						<li><a href="index.html">Home </a></li>
+					</ul>
+
+				</div>
+
+				<h2>Popups</h2>
+				<div class="ul-wrap">
+					<ul>
+						<li><a href="#popup-callback" class="_open-modal">Callpack</a></li>
+						<li><a href="#offcanvas-navbar" class="_open-modal">Navbar</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	@@include('./template/popups/callback.html', {})
+	@@include('./template/popups/navbar.html')
+
+	@@include('./template/_js.html', {})
+
+</body>
+
+</html>

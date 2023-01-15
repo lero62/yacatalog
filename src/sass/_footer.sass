@@ -1,0 +1,61 @@
+.footer
+	width: 100%
+	min-width: rem(320)
+	flex-shrink: 0
+	background: #171B2D
+	color: #fff
+	&__logo
+		color: #fff
+
+		&:hover
+			color: #fff
+
+	&__top
+		padding: 35px 0
+
+	&__bottom
+		padding: 10px 0
+		border-top: 1px solid rgba(#fff, 0.2)
+	&__title
+		font-size: 16px
+		font-weight: 600
+		margin-bottom: 23px
+
+	&__nav
+		list-style-type: none
+		margin: 0
+		padding: 0
+		li
+			position: relative
+			padding-left: 20px
+			margin-bottom: 6px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 8px
+				width: 9px
+				height: 9px
+				background-size: contain
+				background: url('../img/list-icon.svg') no-repeat center
+
+		a
+			color: #fff
+			text-decoration: none
+			font-size: 14px
+			font-weight: 600
+			&:hover
+				text-decoration: underline
+				color: #fff
+
+.copyright
+	font-size: 14px
+	font-weight: 600
+
++max($iphone_sm)
+	.footer__nav
+		li
+			&:before
+				top: 6px
+		a
+			font-size: 12px

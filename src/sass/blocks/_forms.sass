@@ -1,0 +1,260 @@
+$form-height: rem(50)
+$form-size: rem(14)
+$form-weight: 400
+$form-color: $color
+$form-border: rem(1) solid #bbb
+$form-bg: #fff
+$form-radius: 0
+$form-placeholder: #aaa
+
+$checkWidth: rem(18)
+
+/* Form =========================================== */
+.form
+	&-row
+		display: flex
+		flex-wrap: wrap
+		margin: 0 rem(-15)
+		&__col
+			padding: 0 rem(15)
+	&-field
+		margin-bottom: rem(20)
+		position: relative
+
+	&-input
+		display: block
+		width: 100%
+		height: $form-height
+		padding: 0 rem(20)
+		color: $form-color
+		font: $form-weight $form-size $font-family, Arial, sans-serif
+		line-height: normal
+		border: $form-border
+		background: $form-bg
+		border-radius: $form-radius
+		transition: all 0.2s linear
+		&:focus
+			+placeholder
+				opacity: 0
+		+placeholder
+			color: $form-placeholder
+			transition: opacity 0.2s linear
+
+		&._error
+			border-color: red
+		&._valid
+			border-color: green
+
+	&-button
+		margin-top: rem(20)
+
+textarea.form-input
+	height: auto
+	min-height: rem(150)
+	padding-top: rem(18)
+	padding-bottom: rem(18)
+	resize: none
+	overflow: auto
+
+label
+	display: block
+	font-weight: 600
+	margin-bottom: rem(5)
+
+/* Checkbox  ======================================= */
+.checkbox, .radio
+	display: block
+	cursor: pointer
+	font-size: $form-size
+	font-weight: 400
+	margin: 0
+	line-height: $checkWidth
+	position: relative
+
+	input
+		display: none
+
+	&__text
+		padding-left: rem(25)
+		display: block
+
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: $checkWidth
+			height: $checkWidth
+			background: $form-bg
+			border: $form-border
+			transition: all 0.2s linear
+
+	&._error
+		.checkbox__text:before
+			border-color: red
+
+.checkbox input:checked ~ .checkbox__text
+	&:before
+		background: #000
+
+.radio input:checked ~ .radio__text
+	&:before
+		background: #000
+
+	&__text:before
+		border-radius: 50%
+
+/* Selectbox  ======================================= */
+.selectbox
+	position: relative
+	&__head
+		display: flex
+		height: $form-height
+		border: $form-border
+		border-radius: $form-radius
+		cursor: pointer
+		background: $form-bg
+		position: relative
+
+	&__legend
+		color: #aaa
+		// top: 0
+		// left: 1.2rem
+		// font-size: 1.6rem
+		// line-height: $form-height - .2rem
+		// color: #000
+		// position: absolute
+		// z-index: 2
+		// +text-overflow
+
+		// max-width: calc(100% - 2.4rem)
+		// pointer-events: none
+		// padding: 0 .3rem
+		// transition: all 0.1s linear
+		// letter-spacing: 0.01rem
+
+	&__text
+
+		flex: 1
+		min-width: 1px
+		padding: 0 rem(13)
+		max-width: 100%
+		+text-overflow
+		font: $form-weight $form-size $font-family, Arial, sans-serif
+		color: $form-color
+		line-height: $form-height - rem(2)
+
+	&__caret
+		display: flex
+		align-items: center
+		flex: none
+		margin-right: rem(13)
+		font-size: 0
+		&:after
+			content: ''
+			display: block
+			+arr(rem(10),rem(8),#aaa, b)
+
+	&__drop
+		display: none
+		border: $form-border
+		border-top: none
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		z-index: 10
+		background: #fff
+		margin-top: rem(-1)
+
+		ul
+
+			max-height: rem(172)
+			overflow: hidden
+			overflow-y: auto
+			li
+				padding: rem(8) rem(13)
+				font-size: rem(14)
+				color: $color
+				cursor: pointer
+
+				@media (any-hover: hover)
+					&:hover
+						background: #F5F5F5
+				&._selected
+					background: #F5F5F5
+
+	&__search
+		margin-left: rem(-1)
+		margin-right: rem(-1)
+		position: relative
+		.icon-zoom
+			position: absolute
+			left: rem(13)
+			top: rem(10)
+			font-size: rem(16)
+			color: #aaa
+		.form-input
+			padding-left: rem(39)
+
+	&._open
+		.selectbox__head
+			z-index: 11
+		.selectbox__caret
+			transform: rotate(180deg)
+		.selectbox__drop
+			display: block
+
+	&._change
+		// .selectbox__legend
+		// 	top: -.9rem
+		// 	background: #fff
+		// 	font-size: 1.3rem
+		// 	line-height: 1.4rem
+		// 	color: #aaa
+		// 	letter-spacing: -.03rem
+
+.selectbox__drop ul::-webkit-scrollbar
+	width: rem(2)
+
+.selectbox__drop ul::-webkit-scrollbar-track
+	background: #aaa
+.selectbox__drop ul::-webkit-scrollbar-thumb
+	background: #000
+
+.selectbox__drop ul::-webkit-scrollbar-button
+	display: none
+
+/* File  =========================================== */
+.file
+	display: inline-flex
+	align-items: center
+	width: rem(230)
+	position: relative
+	overflow: hidden
+	input
+		position: absolute
+		top: 0
+		right: 0
+		height: auto
+		margin: 0
+		padding: 0
+		opacity: 0
+		font-size: 100px
+		line-height: 1em
+		cursor: pointer
+
+	&__name
+		flex: 1
+		order: 1
+		text-decoration: underline
+		font-weight: $form-weight
+		font-size: $form-size
+		color: $form-color
+		+tr
+		padding: 0 rem(20)
+		+text-overflow
+
+	&:active
+		.jq-file__name, .jq-file__browse .icon
+			color: #00669b

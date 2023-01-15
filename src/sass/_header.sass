@@ -1,0 +1,451 @@
+.header
+	width: 100%
+	min-width: rem(320)
+	text-align: left
+	flex-shrink: 0
+	background: #FFFFFF
+	box-shadow: 0px 2px 2px #D6E2E4
+	position: relative
+	z-index: 5
+
+	&__top
+
+		background: #fff
+		position: relative
+		.header__container
+			height: 83px
+
+	&__logo
+		margin-right: 60px
+	&__catalog-btn
+		margin-right: 30px
+		flex: none
+	&__search
+		flex: 1 1 518px
+		max-width: 518px
+	&__navbar
+		border-top: 1px solid rgba(214, 226, 228, 0.8)
+		padding: 13px 0
+
+	&._active
+		.header__top
+			z-index: 1051
+
+.logo
+	font-size: 28px
+	font-weight: 700
+	text-decoration: none
+	color: $color
+	text-transform: capitalize
+	&:hover
+		color: $color
+
+.catalog-btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	font-size: 16px
+	font-weight: 700
+	text-transform: capitalize
+	color: #fff
+	background: linear-gradient(270deg, #FF9900 0%, #FB5995 91.77%)
+	border-radius: 100px
+	padding: 0 20px 0 45px
+	height: 47px
+	cursor: pointer
+	width: 140px
+	position: relative
+	.icon
+		position: absolute
+		left: 12px
+		top: 50%
+		transform: translate(0, -50%)
+		font-size: 26px
+
+		&-close
+			font-size: 18px
+			display: none
+			left: 16px
+	&._active
+		.icon
+			&-close
+				display: block
+			&-menu
+				display: none
+
+.actions-nav
+	list-style-type: none
+	margin: 0 -10px 0 0
+	padding: 0 0 0 10px
+
+	&__item
+		margin-left: 18px
+	&__link
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 47px
+		height: 47px
+		border-radius: 8px
+		text-decoration: none
+		position: relative
+		.l-badge
+			position: absolute
+			top: 4px
+			right: 4px
+
+		.icon
+			color: #606060
+			font-size: 27px
+			&-statistic
+				font-size: 22px
+
+		@media (any-hover: hover)
+			&:hover
+				background: #f4f4f4
+
+.search-form
+	position: relative
+	&__button
+		position: absolute
+		top: 0
+		right: 5px
+		height: 47px
+		border-radius: 100px
+		width: 47px
+		border: none
+		background: transparent
+		.icon
+			font-size: 20px
+			color: #606060
+			top: -1px
+		@media (any-hover: hover)
+			&:hover
+				.icon
+					color: $color
+
+	&__input
+		font-family: $font-family, sans-serif
+		font-size: 14px
+		font-weight: 500
+		color: $color
+		padding: 0 55px 0 30px
+		width: 100%
+		height: 47px
+		background: #EBF1F1
+		border-radius: 100px
+		border: none
+		+placeholder
+			color: #606060
+
+.top-navbar
+	margin: 0 -4px
+	padding: 0
+	list-style-type: none
+	&__item
+		margin-left: 4px
+		margin-right: 4px
+	&__link
+		font-size: 14px
+		font-weight: 600
+		color: $color
+		text-decoration: none
+		&:hover
+			color: $color-danger
+
+/* begin Mobile Menu */
+#navbar-catalog
+	max-width: 100%
+	width: 100%
+	.offcanvas-body
+		padding: 0
+
++min($ipad + 1)
+	#navbar-catalog
+		top: 83px
+		width: auto
+		.btn-close
+			display: none
+	.backdrop_catalog .offcanvas-backdrop
+		top: 83px !important
+
+	.offcanvas
+		border: 1px solid rgba(214, 226, 228, 0.8)
+
+.offcanvas
+	background: #FFFFFF
+	border: none !important
+
+.navbar-catalog
+	display: flex
+	position: relative
+	height: 100%
+	&__side
+		width: 313px
+		flex: none
+		padding: 15px 10px
+		overflow-y: auto
+		border-right: 1px solid rgba(214, 226, 228, 0.8)
+	&__content
+		flex: 1 1 auto
+		padding: 25px 30px
+		overflow-y: auto
+
+.nc-nav
+	list-style-type: none
+	margin: 0
+	padding: 0
+	&__item
+		margin-bottom: 2px
+		&._active
+			.nc-nav__link
+				color: $color-danger
+				&:after
+					opacity: 1
+	&__link
+		display: block
+		padding: 10px 20px
+		font-size: 16px
+		font-weight: 600
+		color: $color
+		border-radius: 30px
+		text-decoration: none
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			right: 20px
+			top: 50%
+			margin-top: -5px
+			height: 10px
+			width: 9px
+			opacity: 0
+			background-size: contain
+			background: url('../img/list-icon.svg') no-repeat center
+
+		&:hover
+			text-decoration: none
+			color: $color
+		@media (any-hover: hover)
+			&:hover
+				background: #f4f4f4
+
+.nc-grid
+	columns: 2
+	column-gap: 30px
+	max-width: 600px
+	&__item
+		width: 100%
+		display: inline-block
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+
+.ncg-title
+	font-size: 16px
+	font-weight: 600
+	color: $color-danger
+	margin-bottom: 5px
+
+.ncg-nav
+	list-style-type: none
+	margin: 0 -10px
+	padding: 0
+	li
+		margin-bottom: 2px
+	a
+		display: inline-block
+		padding: 4px 10px
+		border-radius: 30px
+		color: $color
+		font-size: 14px
+		font-weight: 600
+		line-height: 1.4
+		text-decoration: none
+		&:hover
+			color: $color
+			text-decoration: none
+		@media (any-hover: hover)
+			&:hover
+				background: #f4f4f4
+
+// .offcanvas
+// 	position: fixed
+// 	width: 100%
+// 	height: 100%
+// 	background-color: rgba(0, 0, 0, 0.8)
+// 	top: 0
+// 	left: 0
+// 	opacity: 0
+// 	visibility: hidden
+// 	overflow: hidden
+// 	z-index: 1040
+// 	transition: visibility 0.2s ease-in-out, opacity 0.2s ease-in-out
+// 	pointer-events: none
+// 	&__overlay
+// 		width: 100%
+// 		height: 100%
+// 		transition: all 0.1s ease-in-out
+
+// 	&__content
+// 		height: 100%
+// 		background-color: #fff
+// 		color: #000
+// 		width: 100%
+// 		max-width: rem(400)
+// 		opacity: 0
+// 		display: flex
+// 		flex-direction: column
+// 		transition: all 0.3s ease-in-out
+// 		transform: translate(-100%,0)
+// 	&__header
+// 		display: flex
+// 		align-items: center
+// 		justify-content: space-between
+// 		padding: rem(10) rem(20)
+// 	&__close
+
+// 		font-size: rem(20)
+// 		color: #000
+// 		cursor: pointer
+// 		display: flex
+// 		align-items: center
+// 		justify-content: center
+// 		width: rem(30)
+// 		height: rem(30)
+// 		.icon
+// 			font-size: rem(20)
+// 			color: $color
+
+// 	&__body
+// 		flex-grow: 1
+// 		overflow-y: auto
+// 		padding: rem(10) rem(20)
+
+// 	&._open
+// 		opacity: 1
+// 		visibility: visible
+// 		pointer-events: auto
+// 		.offcanvas__content
+// 			transform: translate(0,0)
+// 			opacity: 1
+
+/* Media */
+/* --------------------------------------------------------------- */
+
++max($ipad)
+	.header
+		&__catalog-btn
+
+			margin-right: 25px
+		&__logo
+			margin-right: 30px
+
+		&__top
+			.header__container
+				height: 70px
+
+		&__navbar
+			display: none
+
+	.logo
+		font-size: 24px
+
+	.search-form
+		&__input
+			height: 40px
+		&__button
+			height: 40px
+
+	.actions-nav
+		margin-right: -5px
+		&__item
+			margin-left: 10px
+		&__link
+			min-width: 40px
+			height: 40px
+
+	.catalog-btn
+		background: transparent
+		width: 40px
+		height: 40px
+		border-radius: 8px
+		padding: 0
+
+		.icon
+			color: $color-default
+			position: static
+			transform: none
+		span
+			display: none
+
+	#navbar-catalog
+		.btn-close
+			position: absolute
+			top: 10px
+			right: 10px
+			z-index: 10
+
+	.navbar-catalog
+		padding-right: 10px
+
++max($iphone)
+	.header
+		&__top
+			padding-top: 10px
+			padding-bottom: 10px
+			.header__container
+				height: auto
+				flex-wrap: wrap
+		&__catalog-btn
+			order: -1
+		&__search
+			order: 1
+			width: 100%
+			flex: auto
+			max-width: 100%
+			margin-top: 5px
+	.navbar-catalog
+		&__content
+			position: absolute
+			top: 0
+			left: 0
+			height: 100%
+			background: #fff
+			padding-right: 40px
+			padding: 20px 40px 20px 20px
+
+	.catalog-btn
+		width: 36px
+	.actions-nav
+		padding-left: 0
+		&__item
+			margin-left: 8px
+			&:first-child
+				margin-left: 0
+
+		&__link
+			min-width: 36px
+			.icon
+				font-size: 20px
+				&-statistic
+					font-size: 18px
+
+			.l-badge
+				right: -2px
+				top: 2px
+
++max($iphone_sm)
+
+	.header
+		&__catalog-btn
+			margin-right: 15px
+
+	.nc-grid
+		columns: auto
+
++max($iphone_xs)
+	.header__logo
+		margin-right: 10px
+	.logo
+		font-size: 20px

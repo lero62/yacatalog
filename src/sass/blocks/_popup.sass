@@ -1,0 +1,68 @@
+.popup
+	position: fixed
+	width: 100%
+	height: 100%
+
+	top: 0
+	left: 0
+	overflow-y: auto
+	overflow-x: hidden
+
+	z-index: 1040
+	display: none
+	&__body
+		width: 100%
+		min-height: 100%
+		display: flex
+		align-items: center
+		background: transparent
+		justify-content: center
+		padding: rem(30) rem(10)
+		transition: all 0.1s ease-in-out
+
+	&__content
+
+		background-color: #fff
+		color: #000
+		width: 100%
+		max-width: rem(800)
+		padding: 3rem
+		position: relative
+
+		font-size: rem(14)
+		opacity: 0
+		transition: all 0.3s ease-in-out
+		transform: translate(0, 30px)
+
+		&--image
+			width: auto
+			padding: 0
+
+			img
+				max-width: 100%
+				display: block
+
+	&__close
+		position: absolute
+		right: rem(10)
+		top: rem(10)
+		font-size: rem(20)
+		color: #000
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: center
+		width: rem(30)
+		height: rem(30)
+		.icon
+			font-size: rem(20)
+			color: $color
+
+	&._open
+		display: block
+	&._animate
+		.popup__body
+			background-color: rgba(0, 0, 0, 0.8)
+		.popup__content
+			transform: translate(0,0)
+			opacity: 1

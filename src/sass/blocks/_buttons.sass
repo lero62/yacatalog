@@ -1,0 +1,36 @@
+.l-btn, a.l-btn
+	position: relative
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	vertical-align: middle
+	height: 39px
+	padding: 0 15px
+	color: $color-danger
+	font: 500 16px/16px $font-family, Arial, sans-serif
+	text-align: center
+	text-decoration: none
+	border: 1px solid $color-danger
+	background-color: transparent
+	border-radius: 100px
+	cursor: pointer
+	transition: all 0.2s linear
+	overflow: hidden
+	&:hover
+		background: $color-danger
+		color: #fff
+		text-decoration: none
+
+	&--block
+		display: flex
+		width: 100%
+		min-width: none
+		padding-left: rem(10)
+		padding-right: rem(10)
+
+input.l-btn,
+button.l-btn
+	display: inline-block
+	&--block
+		display: block
+		width: 100%
