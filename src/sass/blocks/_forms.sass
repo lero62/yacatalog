@@ -1,11 +1,11 @@
-$form-height: rem(50)
-$form-size: rem(14)
-$form-weight: 400
+$form-height: rem(59)
+$form-size: rem(16)
+$form-weight: 500
 $form-color: $color
-$form-border: rem(1) solid #bbb
-$form-bg: #fff
-$form-radius: 0
-$form-placeholder: #aaa
+$form-border: none
+$form-bg: #D6E2E4
+$form-radius: 100px
+$form-placeholder: #545454
 
 $checkWidth: rem(18)
 
@@ -18,14 +18,14 @@ $checkWidth: rem(18)
 		&__col
 			padding: 0 rem(15)
 	&-field
-		margin-bottom: rem(20)
+		margin-bottom: 15px
 		position: relative
 
 	&-input
 		display: block
 		width: 100%
 		height: $form-height
-		padding: 0 rem(20)
+		padding: 0 rem(30)
 		color: $form-color
 		font: $form-weight $form-size $font-family, Arial, sans-serif
 		line-height: normal
@@ -46,7 +46,10 @@ $checkWidth: rem(18)
 			border-color: green
 
 	&-button
-		margin-top: rem(20)
+		margin-top: 25px
+		.l-btn
+			padding-left: 36px
+			padding-right: 36px
 
 textarea.form-input
 	height: auto
@@ -58,8 +61,10 @@ textarea.form-input
 
 label
 	display: block
-	font-weight: 600
-	margin-bottom: rem(5)
+	margin-bottom: 5px
+	padding-left: 30px
+	font-size: 14px
+	font-weight: 500
 
 /* Checkbox  ======================================= */
 .checkbox, .radio
@@ -83,19 +88,21 @@ label
 			position: absolute
 			top: 0
 			left: 0
-			width: $checkWidth
-			height: $checkWidth
-			background: $form-bg
-			border: $form-border
-			transition: all 0.2s linear
+			width: 18px
+			height: 18px
+			background: #fff
+			border: 1px solid #BFBFBF
+			border-radius: 3px
+			transition: background-color 0.2s linear, border-color 0.2s linear
 
 	&._error
 		.checkbox__text:before
-			border-color: red
+			background: #000
 
 .checkbox input:checked ~ .checkbox__text
 	&:before
-		background: #000
+		background: $color-danger url('../img/checkbox-bg.svg') no-repeat center
+		border-color: $color-danger
 
 .radio input:checked ~ .radio__text
 	&:before

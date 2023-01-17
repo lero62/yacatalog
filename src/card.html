@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Card"
+})
+
+<body class=" bg-default">
+	<!-- BEGIN main wrapper -->
+	<div class="main-wrapper">
+
+		<!-- BEGIN HEADER -->
+		@@include('./template/_header.html', {
+		"nav": 0,
+		"user": 0,
+		})
+		<!-- HEADER EOF   -->
+
+		<!-- BEGIN MAIN -->
+		<main class="main">
+			<div class="main__wrapper">
+				<div class="container-lg">
+
+					<nav style="--bs-breadcrumb-divider: url(../img/crumbs-arrow.svg);" aria-label="breadcrumb">
+						<ol class="breadcrumb l-breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Каталог</a></li>
+							<li class="breadcrumb-item"><a href="#">Электроника</a></li>
+							<li class="breadcrumb-item"><a href="#">Тв, видео</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Телевизоры</li>
+						</ol>
+					</nav>
+					<div class="card-wrapper ">
+						<div class="row g-2">
+							<div class="col-xl-9 col-lg-8">
+								<div class="card-wrapper__content">
+									<h1 class="card-wrapper__title">Планшет Xiaomi Mi Pad 5 6/128Gb</h1>
+									<div class="card-wrapper__content-wrap">
+										<div class="card-wrapper__slider">
+											<div class="swiper card-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/card-swiper-img.jpg" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/card-swiper-img.jpg" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/card-swiper-img.jpg" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/card-swiper-img.jpg" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/card-swiper-img.jpg" alt="">
+													</div>
+
+												</div>
+											</div>
+											<div class="swiper card-nav-swiper">
+												<div class="swiper-wrapper">
+													<div class="swiper-slide">
+														<img src="img/card-nav-swiper-img.jpg" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/card-nav-swiper-img.jpg" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/card-nav-swiper-img.jpg" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/card-nav-swiper-img.jpg" alt="">
+													</div>
+													<div class="swiper-slide">
+														<img src="img/card-nav-swiper-img.jpg" alt="">
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="card-wrapper__info">
+											<div class="card-wrapper__actions">
+												<div class="cw-reviews">
+													<span class="color-danger">5.0</span>
+													<span>2 отзыва</span>
+												</div>
+												<div class="cw-actions ms-4">
+													<span class="action-btn ms-1 me-1">
+														<svg class="icon icon-heart">
+															<use xlink:href="img/sprite.svg#heart"></use>
+														</svg>
+													</span>
+													<span class="action-btn ms-1 me-1">
+														<svg class="icon icon-statistic">
+															<use xlink:href="img/sprite.svg#statistic"></use>
+														</svg>
+													</span>
+												</div>
+
+											</div>
+
+											<div class="card-wrapper__description">
+												<h2>О товаре</h2>
+												<div class="cw-characteristic">Емкость аккумулятора 8720 ма*ч </div>
+												<div class="cw-characteristic">USB-интерфейс Есть </div>
+												<div class="cw-characteristic">Сканер отпечатка пальца Есть </div>
+												<div class="cw-characteristic">Время работы 16 ч </div>
+												<a href="#" class="link">Все характеристики</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-lg-4">
+								<div class="card-wrapper__side">
+									<div class="price-value mb-3">от <span class="nowrap">25 490₽</span> до <span class="nowrap">40 490 ₽</span></div>
+
+									<div class="cw-btn">
+										<a href="#" class="l-btn l-btn--block l-btn--gradient l-btn--md">В магазин</a>
+									</div>
+
+									<div class="cw-salesman mt-4">
+										<span>Продавец:</span>
+										<a href="#">video-shoper.ru</a>
+									</div>
+									<div class="cs-delivery mt-3">
+										<div class="cs-delivery__item">Самовывоз: есть</div>
+										<div class="cs-delivery__item">Доставка: от 400 ₽</div>
+										<div class="cs-delivery__item">Оплата картой и наличными</div>
+									</div>
+
+									<div class="cw-more mt-4 pt-md-2">
+										<a href="#" class="l-btn l-btn--block l-btn--md l-btn--default">Ещё 28 предложений</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="card-wrapper__tabs mt-2">
+							<ul class="tabs-nav nav">
+								<li class="tabs-nav__item">
+									<div class="tabs-nav__link active" data-bs-toggle="tab" data-bs-target="#tab-details">Характеристики</div>
+								</li>
+								<li class="tabs-nav__item">
+									<div class="tabs-nav__link" data-bs-toggle="tab" data-bs-target="#tab-price">Цены <span class="bdg">10</span></div>
+								</li>
+								<li class="tabs-nav__item">
+									<div class="tabs-nav__link" data-bs-toggle="tab" data-bs-target="#tab-reviews">Отзывы <span class="bdg">2</span></div>
+								</li>
+							</ul>
+							<div class="tab-content l-tab-content">
+								<div class="tab-pane fade show active" id="tab-details">
+									<div class="title-2 ttu mb-md-4 mb-3">ХАРАКТЕРИСТИКИ MI PAD 5 6/128GB</div>
+
+									<div class="row g-lg-5 gy-4">
+										<div class="col-lg-6">
+											<div class="cw-grid">
+												<div class="cw-grid__title">Общие характеристики</div>
+
+												<ul class="cw-grid__list">
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Бренд Xiaomi </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Xiaomi</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Емкость аккумулятора </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">8720 ма*ч</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">USB-интерфейс</span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Есть</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Сканер отпечатка пальца </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Есть</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Время работы </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">16</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="cw-grid">
+												<div class="cw-grid__title">Система</div>
+
+												<ul class="cw-grid__list">
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Бренд Xiaomi </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Xiaomi</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Емкость аккумулятора </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">8720 ма*ч</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">USB-интерфейс</span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Есть</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Сканер отпечатка пальца </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Есть</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Время работы </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">16</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="cw-grid">
+												<div class="cw-grid__title">Экран</div>
+
+												<ul class="cw-grid__list">
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Бренд Xiaomi </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Xiaomi</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Емкость аккумулятора </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">8720 ма*ч</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">USB-интерфейс</span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Есть</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Сканер отпечатка пальца </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Есть</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Время работы </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">16</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="cw-grid">
+												<div class="cw-grid__title">Связь</div>
+
+												<ul class="cw-grid__list">
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Бренд Xiaomi </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Xiaomi</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Емкость аккумулятора </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">8720 ма*ч</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">USB-интерфейс</span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Есть</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Сканер отпечатка пальца </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">Есть</span>
+													</li>
+													<li class="cw-grid__list-item">
+														<span class="cw-grid__list-label">Время работы </span>
+														<span class="cw-grid__list-devider"></span>
+														<span class="cw-grid__list-labeled">16</span>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="tab-pane fade" id="tab-reviews">3</div>
+								<div class="tab-pane fade" id="tab-price">
+									<div class="panel d-flex justify-content-end align-items-center flex-wrap mt-2 mb-1">
+										<div class="panel__sorting sorting dropdown">
+											<span class="dropdown-toggle" data-bs-toggle="dropdown">Сортировать</span>
+											<ul class="dropdown-menu dropdown-menu-end l-dropdown-menu">
+												<li><a class="dropdown-item" href="#">увеличению цены</a></li>
+												<li><a class="dropdown-item" href="#">уменьшению цены</a></li>
+												<li><a class="dropdown-item" href="#">рейтингу</a></li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="prices">
+										@@include('./template/blocks/price_card.html', {
+										img: 'img/prices-img.jpg',
+										title: 'Планшет Xiaomi Pad 5 6/128Gb Global pearl white (жемчужный белый)',
+										price: '25 490 ₽',
+										logo: 'img/price-logo-1.jpg',
+										})
+										@@include('./template/blocks/price_card.html', {
+										img: 'img/prices-img.jpg',
+										title: 'Планшет Xiaomi Pad 5 6/128Gb Global pearl white (жемчужный белый)',
+										price: '25 490 ₽',
+										logo: 'img/price-logo-2.jpg',
+										})
+										@@include('./template/blocks/price_card.html', {
+										img: 'img/prices-img.jpg',
+										title: 'Планшет Xiaomi Pad 5 6/128Gb Global pearl white (жемчужный белый)',
+										price: '25 490 ₽',
+										logo: 'img/price-logo-1.jpg',
+										})
+										@@include('./template/blocks/price_card.html', {
+										img: 'img/prices-img.jpg',
+										title: 'Планшет Xiaomi Pad 5 6/128Gb Global pearl white (жемчужный белый)',
+										price: '25 490 ₽',
+										logo: 'img/price-logo-2.jpg',
+										})
+										@@include('./template/blocks/price_card.html', {
+										img: 'img/prices-img.jpg',
+										title: 'Планшет Xiaomi Pad 5 6/128Gb Global pearl white (жемчужный белый)',
+										price: '25 490 ₽',
+										logo: 'img/price-logo-1.jpg',
+										})
+										@@include('./template/blocks/price_card.html', {
+										img: 'img/prices-img.jpg',
+										title: 'Планшет Xiaomi Pad 5 6/128Gb Global pearl white (жемчужный белый)',
+										price: '25 490 ₽',
+										logo: 'img/price-logo-2.jpg',
+										})
+										@@include('./template/blocks/price_card.html', {
+										img: 'img/prices-img.jpg',
+										title: 'Планшет Xiaomi Pad 5 6/128Gb Global pearl white (жемчужный белый)',
+										price: '25 490 ₽',
+										logo: 'img/price-logo-1.jpg',
+										})
+										@@include('./template/blocks/price_card.html', {
+										img: 'img/prices-img.jpg',
+										title: 'Планшет Xiaomi Pad 5 6/128Gb Global pearl white (жемчужный белый)',
+										price: '25 490 ₽',
+										logo: 'img/price-logo-2.jpg',
+										})
+									</div>
+
+									<nav class="mt-md-4 pt-2 d-flex flex-column align-items-center" aria-label="Page navigation example">
+										<div class="pagination-button mb-md-4 mb-3">
+											<a href="#" class="btn-more">Показать еще</a>
+										</div>
+										<ul class="l-pagination">
+											<li class="page-item " style="display: none;">
+												<a class="page-link" href="#">
+													<svg class="icon icon-left">
+														<use xlink:href="img/sprite.svg#left"></use>
+													</svg>
+												</a>
+											</li>
+											<li class="page-item active"><a class="page-link" href="#">1</a></li>
+											<li class="page-item"><a class="page-link" href="#">2</a></li>
+											<li class="page-item">
+												<a class="page-link" href="#">
+													<svg class="icon icon-right">
+														<use xlink:href="img/sprite.svg#right"></use>
+													</svg>
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+				</div>
+			</div>
+		</main>
+		<!-- MAIN EOF   -->
+
+		<!-- BEGIN FOOTER -->
+		@@include('./template/_footer.html', {})
+		<!-- FOOTER EOF   -->
+
+	</div>
+	<!-- main wrapper EOF   -->
+
+	<!-- BEGIN POPUPS -->
+	@@include('./template/popups/callback.html')
+	@@include('./template/navbar/navbar.html')
+	<!-- POPUPS EOF   -->
+
+	@@include('./template/_js.html', {})
+
+</body>
+
+</html>

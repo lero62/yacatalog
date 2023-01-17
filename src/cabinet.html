@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "cabinet"
+})
+
+<body class="page-cabinet">
+	<!-- BEGIN main wrapper -->
+	<div class="main-wrapper">
+		<!-- BEGIN MAIN -->
+		<main class="main">
+			<div class=" cabinet-wrapper	d-lg-flex">
+
+				<div class="cabinet-wrapper__side cw scrollbar">
+
+					<div class="cw-logo ">
+						<span class="color-danger">Я</span>Каталог
+					</div>
+
+					<ul class="cw-nav d-lg-block d-none">
+						<li class="cw-nav__item">
+							<a href="#" class="cw-nav__link _active">
+								<span class="cw-nav__icon">
+									<img src="img/settings.svg" alt="">
+								</span>
+								Настройки магазина
+							</a>
+						</li>
+						<li class="cw-nav__item">
+							<a href="#" class="cw-nav__link">
+								<span class="cw-nav__icon">
+									<img src="img/price-list.svg" alt="">
+								</span>
+								Прайс лист магазина
+							</a>
+							<ul>
+								<li><a href="#">Актуальный прайс лист</a></li>
+								<li><a href="#">Загрузка прайс листа</a></li>
+								<li><a href="#">Товары и ставки</a></li>
+							</ul>
+						</li>
+						<li class="cw-nav__item">
+							<a href="#" class="cw-nav__link">
+								<span class="cw-nav__icon">
+									<img src="img/balance.svg" alt="">
+								</span>
+								Баланс
+							</a>
+						</li>
+						<li class="cw-nav__item">
+							<a href="#" class="cw-nav__link">
+								<span class="cw-nav__icon">
+									<img src="img/document.svg" alt="">
+								</span>
+								Очеты
+							</a>
+							<ul>
+								<li><a href="#">Товары в системе</a></li>
+								<li><a href="#">Статистика по дням и категориям</a></li>
+								<li><a href="#">Статистика по брендам</a></li>
+								<li><a href="#">Общая статистика</a></li>
+							</ul>
+						</li>
+						<li class="cw-nav__item">
+							<a href="#" class="cw-nav__link">
+								<span class="cw-nav__icon">
+									<img src="img/meneger.svg" alt="">
+								</span>
+								Ваш менеджер
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="cabinet-wrapper__content d-flex flex-column">
+					<div class="cabinet-wrapper__top ">
+						<div class="cwt">
+							<div class="cwt__item">
+								<div class="cwt__label">Магазин:</div>
+								<div class="cwt__link">
+									<a href="#">shoper.ru</a>
+								</div>
+							</div>
+							<div class="cwt__item">
+								<div class="cwt__label">ID магазина:</div>
+								<div class="cwt__id">id102548</div>
+							</div>
+							<div class="cwt__item">
+								<div class="cwt__label">Баланс:</div>
+								<div class="cwt__price">100000 руб.</div>
+							</div>
+						</div>
+
+						<ul class="cwt-menu">
+							<li class="cwt-menu__item">
+								<a href="#" class="cwt-menu__link">
+									<div class="cwt-menu__icon">
+										<svg class="icon icon-notification">
+											<use xlink:href="img/sprite.svg#notification"></use>
+										</svg>
+										<span class="l-badge"></span>
+									</div>
+								</a>
+							</li>
+							<li class="cwt-menu__item">
+								<a href="#" class="cwt-menu__link">Выход</a>
+							</li>
+						</ul>
+					</div>
+					<div class="cabinet-wrapper__middle scrollbar">
+						<h1 class="cwm-titl">Настройки магазина</h1>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN EOF   -->
+
+	</div>
+	<!-- main wrapper EOF   -->
+
+	@@include('./template/_js.html', {})
+</body>
+
+</html>

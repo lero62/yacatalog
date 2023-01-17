@@ -19,6 +19,10 @@
 .font-100
 	font-weight: 100
 
+.title-2
+	font-size: 20px
+	font-weight: 600
+
 .margin
 	+margin
 
@@ -26,5 +30,22 @@
 	color: $color-danger !important
 
 .seo-text
+	color: $color-default
 	p
 		margin-bottom: 24px
+		&:last-child
+			margin-bottom: 0
+
+.link
+	color: $color-danger
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+
++max($ipad)
+	.title-2
+		font-size: 18px
+
++max($iphone)
+	.title-2
+		font-size: 14px

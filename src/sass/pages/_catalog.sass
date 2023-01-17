@@ -2,8 +2,310 @@
 	background: #fff
 	padding: 10px 24px
 	min-height: 45px
+	&__filter-btn
+		margin-top: -10px
+		margin-bottom: -10px
+		margin-right: -24px
 
 .sorting
 	& > span
 		font-size: 14px
 		font-weight: 500
+
+.card-item
+	background: #fff
+	display: flex
+	padding: 15px 25px
+	margin-bottom: 10px
+	&:last-child
+		margin-bottom: 0
+	&__side
+		flex: none
+		width: 128px
+		margin-right: 49px
+
+	&__img
+		height: 108px
+
+		display: flex
+		align-items: center
+		justify-content: center
+		img
+			max-height: 100%
+
+	&__actions
+		text-align: center
+		margin-top: 15px
+
+	&__content
+		flex: 1
+		min-width: 1px
+
+		display: flex
+		&-info
+			padding-top: 10px
+			flex: 1
+			min-width: 1px
+		&-details
+			display: flex
+			flex-direction: column
+			width: 212px
+			flex: none
+			margin-left: 49px
+			padding-top: 5px
+
+	&__title
+		color: $color
+		text-decoration: none
+		margin-bottom: 25px
+		font-size: 14px
+		line-height: 1.3
+		display: block
+		font-weight: 600
+		&:hover
+			color: $color-danger
+
+	&__text
+		color: $color-default
+		font-size: 14px
+		line-height: 1.2
+
+	&__price
+		margin-bottom: 8px
+		.price-value
+			font-size: 20px
+			font-weight: 700
+			line-height: 1.2
+
+	&__table
+		width: 100%
+
+	&__button
+		margin-top: auto
+		padding-top: 15px
+		.l-btn
+			min-width: 186px
+			font-size: 14px
+
+.cit-link
+	+text-overflow
+	width: 100%
+	min-width: 1px
+	overflow: hidden
+
+.ci-table
+	&__item
+		display: flex
+
+	&__link, &__price
+		font-size: 14px
+		font-weight: 500
+		line-height: 1.2
+		width: 50%
+	&__link
+		color: $color-default
+		padding-right: 10px
+	&__price
+		text-align: right
+
+.section-description
+	background: #fff
+	padding: 33px
+
+/* Filter */
+/* --------------------------------------------------------------- */
+#filter
+	width: 300px !important
+	.offcanvas-body
+		overflow: hidden
+		padding-right: 5px
+	.filter-wrapper
+		overflow: hidden
+		overflow-y: auto
+		height: 100%
+		padding-right: 15px
+.filter-btn
+	width: 45px
+	height: 45px
+	background: $color-danger
+	color: #fff
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+	.icon
+		font-size: 16px
+
+	&:hover
+		background: darken($color-danger, 7%)
+
+.filter
+	background: #fff
+	padding: 5px 0
+	min-height: 100%
+	&__head
+		padding: 10px 25px
+		position: relative
+		cursor: pointer
+		&:after
+			content: ''
+			background: url('../img/arrow-down.svg') no-repeat center
+			background-size: container
+			width: 8px
+			height: 8px
+			position: absolute
+			top: 50%
+			margin-top: -4px
+			right: 25px
+			transition: all 0.2s linear
+		&._active
+			&:after
+				transform: rotate(180deg)
+
+	&__title
+		font-size: 15px
+		font-weight: 600
+
+	&__body
+		padding: 10px 25px 15px
+
+	&__list
+		list-style-type: none
+		margin: 0
+		padding: 0
+		max-height: 320px
+		overflow: hidden
+		overflow-y: auto
+		li
+			line-height: 1.2
+			margin-bottom: 11px
+			&:last-child
+				margin-bottom: 0
+		a
+			color: $color-default
+			font-size: 14px
+			font-weight: 500
+			text-decoration: none
+			&:hover
+				color: $color
+
+	&__check-list
+		list-style-type: none
+		margin: 0
+		padding: 0
+		max-height: 320px
+		overflow: hidden
+		overflow-y: auto
+		li
+			line-height: 1.2
+			margin-bottom: 11px
+			&:last-child
+				margin-bottom: 0
+		.checkbox
+			display: inline-block
+			&__text
+				color: $color-default
+				font-size: 14px
+				font-weight: 500
+				text-decoration: none
+				padding-left: 30px
+				&:hover
+					color: $color
+
+	&__buttons
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding: 10px 25px 15px
+
+		.l-btn
+			width: auto
+			margin-top: 10px
+			min-width: 186px
+
+/* Media */
+/* --------------------------------------------------------------- */
+
++max($laptop)
+	.card-item
+		&__side
+			margin-right: 25px
+		&__content
+			&-details
+				margin-left: 25px
+				width: 190px
+
++max($ipad)
+
+	.filter
+		padding: 0
+		&__head
+			padding-left: 0
+			padding-right: 0
+			&:after
+				right: 0
+		&__body
+			padding-left: 0
+			padding-right: 0
+
++max($iphone)
+
+	.panel
+		padding: 10px 15px
+		&__filter-btn
+			margin-right: -15px
+	.card-item
+		padding: 10px 15px
+		&__content
+			display: block
+			&-info
+				padding-top: 0
+			&-details
+				margin-left: 0
+				width: auto
+				margin-top: 15px
+				padding-top: 0
+		&__table
+			max-width: 250px
+
+		&__title
+			margin-bottom: 15px
+
+	.section-description
+		padding: 20px
+
++max($iphone_sm)
+	.card-item
+		padding: 10px
+		&__side
+			width: 34%
+			margin-right: 15px
+		&__img
+			width: auto
+			height: auto
+
+		&__title
+			font-size: 12px
+		&__text
+			font-size: 12px
+
+		&__price
+			.price-value
+				font-size: 16px
+
+		&__button
+			.l-btn
+				min-width: 1px
+				width: 100%
+				display: flex
+				padding-left: 10px
+				padding-right: 10px
+
+	.ci-table__link, .ci-table__price
+		font-size: 12px
+
++max($iphone_xs)
+	.card-item
+
+		&__side
+			width: 31%

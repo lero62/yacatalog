@@ -5,7 +5,7 @@
 "title": "Catalog"
 })
 
-<body class="loaded bg-default">
+<body class=" bg-default">
 	<!-- BEGIN main wrapper -->
 	<div class="main-wrapper">
 
@@ -18,165 +18,267 @@
 
 		<!-- BEGIN MAIN -->
 		<main class="main">
+			<div class="main__wrapper">
+				<div class="container-lg">
 
-			<div class="container-lg">
-				<nav style="--bs-breadcrumb-divider: url(../img/crumbs-arrow.svg);" aria-label="breadcrumb">
-					<ol class="breadcrumb l-breadcrumb">
-						<li class="breadcrumb-item"><a href="#">Каталог</a></li>
-						<li class="breadcrumb-item"><a href="#">Электроника</a></li>
-						<li class="breadcrumb-item"><a href="#">Тв, видео</a></li>
-						<li class="breadcrumb-item active" aria-current="page">Телевизоры</li>
-					</ol>
-				</nav>
+					<nav style="--bs-breadcrumb-divider: url(../img/crumbs-arrow.svg);" aria-label="breadcrumb">
+						<ol class="breadcrumb l-breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Каталог</a></li>
+							<li class="breadcrumb-item"><a href="#">Электроника</a></li>
+							<li class="breadcrumb-item"><a href="#">Тв, видео</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Телевизоры</li>
+						</ol>
+					</nav>
 
-				<div class="row g-2">
-					<div class="col-lg-9">
-						<div class="panel d-flex justify-content-end align-items-center flex-wrap">
-							<div class="panel__sorting sorting dropdown">
-								<span class="dropdown-toggle" data-bs-toggle="dropdown">Сортировать</span>
-								<ul class="dropdown-menu dropdown-menu-end l-dropdown-menu">
-									<li><a class="dropdown-item" href="#">увеличению цены</a></li>
-									<li><a class="dropdown-item" href="#">уменьшению цены</a></li>
-									<li><a class="dropdown-item" href="#">рейтингу</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3">
-						<div class="filter" data-spollers>
-							<div class="filter__item ">
-								<div class="filter__head _active" data-spoller>
-									<div class="filter__title">Категории</div>
-								</div>
-								<div class="filter__body">
-									<ul class="filter__list">
-										<li>
-											<a href="#">3D телевизоры</a>
-										</li>
-										<li>
-											<a href="#">OLED телевизоры</a>
-										</li>
-										<li>
-											<a href="#">Цифровые телевизоры</a>
-										</li>
-										<li>
-											<a href="#">Плазменные телевизоры</a>
-										</li>
-										<li>
-											<a href="#">ЖК-телевизоры</a>
-										</li>
-										<li>
-											<a href="#">HD телевизоры</a>
-										</li>
-										<li>
-											<a href="#">Телевизоры 4к</a>
-										</li>
-										<li>
-											<a href="#">Телевизоры Full HD</a>
-										</li>
-										<li>
-											<a href="#">Телевизоры SMART TV Телевизоры Ultra HD</a>
-										</li>
+					<div class=" row g-2">
+						<div class="col-lg-9">
+							<div class="panel d-flex justify-content-end align-items-center flex-wrap mb-2">
+								<div class="panel__sorting sorting dropdown">
+									<span class="dropdown-toggle" data-bs-toggle="dropdown">Сортировать</span>
+									<ul class="dropdown-menu dropdown-menu-end l-dropdown-menu">
+										<li><a class="dropdown-item" href="#">увеличению цены</a></li>
+										<li><a class="dropdown-item" href="#">уменьшению цены</a></li>
+										<li><a class="dropdown-item" href="#">рейтингу</a></li>
 									</ul>
 								</div>
-							</div>
-							<div class="filter__item ">
-								<div class="filter__head " data-spoller>
-									<div class="filter__title">Цена</div>
+
+								<div class="panel__filter-btn filter-btn d-lg-none ms-4" data-bs-toggle="offcanvas" data-bs-target="#filter">
+									<svg class="icon icon-filter">
+										<use xlink:href="img/sprite.svg#filter"></use>
+									</svg>
 								</div>
-								<div class="filter__body">
-									<div class="range">
-										<div class="range__row">
-											<div class="range__label">от </div>
-											<div class="range__item">
-												<input type="text" id="rangefrom" value="10000" />
-											</div>
-											<div class="range__label">до </div>
-											<div class="range__item">
-												<input type="text" id="rangeto" value="50000" />
-											</div>
-										</div>
-										<div id="range" class="range-scroll"></div>
+							</div>
+							<div class="cards">
+								@@include('./template/blocks/card_item.html', {
+								img: '../img/card-item-img.jpg',
+								title: 'Телевизор led starwind 32" sw-led32ba201 черный/hd ready',
+								price_value: 'от 24 990 ₽',
+								text: 'Диагональ экрана: 11", разрешение фотокамеры: 13 mpix',
+								button: 'Сравнить цены 35',
+								})
+
+								@@include('./template/blocks/card_item.html', {
+								img: '../img/card-item-img.jpg',
+								title: 'Телевизор led starwind 32" sw-led32ba201 черный/hd ready',
+								price_value: 'от 24 990 ₽',
+								text: 'Диагональ экрана: 11", разрешение фотокамеры: 13 mpix',
+								button: 'Сравнить цены 35',
+								})
+
+								@@include('./template/blocks/card_item.html', {
+								img: '../img/card-item-img.jpg',
+								title: 'Телевизор led starwind 32" sw-led32ba201 черный/hd ready',
+								price_value: 'от 24 990 ₽',
+								text: 'Диагональ экрана: 11", разрешение фотокамеры: 13 mpix',
+								button: 'Сравнить цены 35',
+								})
+
+								@@include('./template/blocks/card_item.html', {
+								img: '../img/card-item-img.jpg',
+								title: 'Телевизор led starwind 32" sw-led32ba201 черный/hd ready',
+								price_value: 'от 24 990 ₽',
+								text: 'Диагональ экрана: 11", разрешение фотокамеры: 13 mpix',
+								button: 'Сравнить цены 35',
+								})
+
+								@@include('./template/blocks/card_item.html', {
+								img: '../img/card-item-img.jpg',
+								title: 'Телевизор led starwind 32" sw-led32ba201 черный/hd ready',
+								price_value: 'от 24 990 ₽',
+								text: 'Диагональ экрана: 11", разрешение фотокамеры: 13 mpix',
+								button: 'Сравнить цены 35',
+								})
+								@@include('./template/blocks/card_item.html', {
+								img: '../img/card-item-img.jpg',
+								title: 'Телевизор led starwind 32" sw-led32ba201 черный/hd ready',
+								price_value: 'от 24 990 ₽',
+								text: 'Диагональ экрана: 11", разрешение фотокамеры: 13 mpix',
+								button: 'Перейти в магазин',
+								})
+							</div>
+						</div>
+						<div class="col-lg-3">
+							<div class="filter" data-spollers data-da="filter-wrapper, 1, 991">
+								<div class="filter__item ">
+									<div class="filter__head _active" data-spoller>
+										<div class="filter__title">Категории</div>
+									</div>
+									<div class="filter__body">
+										<ul class="filter__list scrollbar">
+											<li>
+												<a href="#">3D телевизоры</a>
+											</li>
+											<li>
+												<a href="#">OLED телевизоры</a>
+											</li>
+											<li>
+												<a href="#">Цифровые телевизоры</a>
+											</li>
+											<li>
+												<a href="#">Плазменные телевизоры</a>
+											</li>
+											<li>
+												<a href="#">ЖК-телевизоры</a>
+											</li>
+											<li>
+												<a href="#">HD телевизоры</a>
+											</li>
+											<li>
+												<a href="#">Телевизоры 4к</a>
+											</li>
+											<li>
+												<a href="#">Телевизоры Full HD</a>
+											</li>
+											<li>
+												<a href="#">Телевизоры SMART TV </a>
+											</li>
+											<li><a href="#">Телевизоры Ultra HD</a></li>
+										</ul>
 									</div>
 								</div>
-							</div>
-							<div class="filter__item ">
-								<div class="filter__head " data-spoller>
-									<div class="filter__title">Производитель</div>
-								</div>
-								<div class="filter__body" style="display: none;">
-									<ul class="filter__check-list">
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" />
-												<span class="checkbox__text">samsung</span>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" />
-												<span class="checkbox__text">lg</span>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" />
-												<span class="checkbox__text">sony</span>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" />
-												<span class="checkbox__text">telefunken</span>
-											</label>
-										</li>
-										<li>
-											<label class="checkbox">
-												<input type="checkbox" />
-												<span class="checkbox__text">bbk</span>
-											</label>
-										</li>
-									</ul>
-								</div>
-							</div>
+								<div class="filter__item ">
+									<div class="filter__head _active" data-spoller>
+										<div class="filter__title">Цена</div>
+									</div>
+									<div class="filter__body">
+										<div class="range ">
+											<div class="range__row">
+												<div class="range__label me-2">от </div>
+												<div class="range__input">
+													<input type="text" class="js-input-from" value="0" />
+												</div>
+												<div class="range__label me-2 ms-3">до </div>
+												<div class="range__input">
+													<input type="text" class="js-input-to" value="0" />
+												</div>
+											</div>
+											<div class="range-slider">
+												<input type="text" class="js-range-slider" value="" />
+											</div>
 
-							<div class="filter__item ">
-								<div class="filter__head " data-spoller>
-									<div class="filter__title">Разрешение экрана</div>
+										</div>
+									</div>
 								</div>
-								<div class="filter__body" style="display: none;">
-									<p>11111</p>
+								<div class="filter__item ">
+									<div class="filter__head _active" data-spoller>
+										<div class="filter__title">Производитель</div>
+									</div>
+									<div class="filter__body">
+										<ul class="filter__check-list">
+											<li>
+												<label class="checkbox">
+													<input type="checkbox" />
+													<span class="checkbox__text">samsung</span>
+												</label>
+											</li>
+											<li>
+												<label class="checkbox">
+													<input type="checkbox" />
+													<span class="checkbox__text">lg</span>
+												</label>
+											</li>
+											<li>
+												<label class="checkbox">
+													<input type="checkbox" />
+													<span class="checkbox__text">sony</span>
+												</label>
+											</li>
+											<li>
+												<label class="checkbox">
+													<input type="checkbox" />
+													<span class="checkbox__text">telefunken</span>
+												</label>
+											</li>
+											<li>
+												<label class="checkbox">
+													<input type="checkbox" />
+													<span class="checkbox__text">bbk</span>
+												</label>
+											</li>
+										</ul>
+									</div>
 								</div>
-							</div>
 
-							<div class="filter__item ">
-								<div class="filter__head " data-spoller>
-									<div class="filter__title">Производитель</div>
+								<div class="filter__item ">
+									<div class="filter__head " data-spoller>
+										<div class="filter__title">Разрешение экрана</div>
+									</div>
+									<div class="filter__body" style="display: none;">
+										<p>11111</p>
+									</div>
 								</div>
-								<div class="filter__body" style="display: none;">
-									<p>11111</p>
-								</div>
-							</div>
 
-							<div class="filter__item ">
-								<div class="filter__head " data-spoller>
-									<div class="filter__title">Тип</div>
+								<div class="filter__item ">
+									<div class="filter__head " data-spoller>
+										<div class="filter__title">Производитель</div>
+									</div>
+									<div class="filter__body" style="display: none;">
+										<p>11111</p>
+									</div>
 								</div>
-								<div class="filter__body" style="display: none;">
-									<p>11111</p>
+
+								<div class="filter__item ">
+									<div class="filter__head " data-spoller>
+										<div class="filter__title">Тип</div>
+									</div>
+									<div class="filter__body" style="display: none;">
+										<p>11111</p>
+									</div>
 								</div>
-							</div>
 
-							<div class="filter__buttons">
-								<button class="l-btn">Показать все</button>
-								<button class="l-btn l-bth--gradient">Фильтровать</button>
-							</div>
+								<div class="filter__buttons">
+									<button class="l-btn">Показать все</button>
+									<button class="l-btn l-btn--gradient">Фильтровать</button>
+								</div>
 
+							</div>
 						</div>
 					</div>
+					<div class=" row g-2">
+						<div class="col-lg-9">
+							<nav class="mt-md-4 pt-2 d-flex flex-column align-items-center" aria-label="Page navigation example">
+								<div class="pagination-button mb-md-4 mb-3">
+									<a href="#" class="btn-more">Показать еще</a>
+								</div>
+								<ul class="l-pagination">
+									<li class="page-item " style="display: none;">
+										<a class="page-link" href="#">
+											<svg class="icon icon-left">
+												<use xlink:href="img/sprite.svg#left"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="page-item active"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item">
+										<a class="page-link" href="#">
+											<svg class="icon icon-right">
+												<use xlink:href="img/sprite.svg#right"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+
+					</div>
+
+
+					<section class="section-description section mb-0">
+
+						<div class="section__head mb-4">
+							<h2 class="section__title">Описание</h2>
+						</div>
+
+						<div class="seo-text">
+							<p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+
+							<p>По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.</p>
+						</div>
+
+					</section>
 				</div>
 			</div>
-
 		</main>
 		<!-- MAIN EOF   -->
 
@@ -190,6 +292,7 @@
 	<!-- BEGIN POPUPS -->
 	@@include('./template/popups/callback.html')
 	@@include('./template/navbar/navbar.html')
+	@@include('./template/navbar/filter.html')
 	<!-- POPUPS EOF   -->
 
 	@@include('./template/_js.html', {})

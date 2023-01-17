@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('./template/_head.html', {
+"title": "Login"
+})
+
+<body class="page-login">
+	<!-- BEGIN main wrapper -->
+	<div class="main-wrapper">
+		<!-- BEGIN MAIN -->
+		<main class="main">
+			<div class=" login-wrapper	d-lg-flex">
+
+				<div class="login-wrapper__side lgs scrollbar">
+					<div class="lgs-top">
+						<div class="lgs-logo ">
+							<span class="color-danger">Я</span>Каталог
+						</div>
+
+						<div class="lgs-burger dropdown d-lg-none">
+							<div class="lgs-burger__button" data-bs-toggle="dropdown">
+								<svg class="icon icon-menu">
+									<use xlink:href="img/sprite.svg#menu"></use>
+								</svg>
+							</div>
+
+							<ul class="dropdown-menu dm-menu">
+								<li><a href="#" class="dropdown-item active">Как работает торговая площадка</a></li>
+								<li><a href="#" class="dropdown-item">Регистрация магазина</a></li>
+								<li><a href="#" class="dropdown-item">Стоимость услуг</a></li>
+								<li><a href="#" class="dropdown-item">Форматы и способы передачи файлов</a></li>
+								<li><a href="#" class="dropdown-item">Контакты</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<ul class="lgs-nav d-lg-block d-none">
+						<li class="lgs-nav__item">
+							<a href="#" class="lgs-nav__link _active">
+								<span class="lgs-nav__icon">
+									<img src="img/work.svg" alt="">
+								</span>
+								Как работает торговая площадка
+							</a>
+						</li>
+						<li class="lgs-nav__item">
+							<a href="#" class="lgs-nav__link">
+								<span class="lgs-nav__icon">
+									<img src="img/reg.svg" alt="">
+								</span>
+								Регистрация магазина
+							</a>
+						</li>
+						<li class="lgs-nav__item">
+							<a href="#" class="lgs-nav__link">
+								<span class="lgs-nav__icon">
+									<img src="img/price.svg" alt="">
+								</span>
+								Стоимость услуг
+							</a>
+						</li>
+						<li class="lgs-nav__item">
+							<a href="#" class="lgs-nav__link">
+								<span class="lgs-nav__icon">
+									<img src="img/form.svg" alt="">
+								</span>
+								Форматы и способы передачи файлов</a>
+						</li>
+						<li class="lgs-nav__item">
+							<a href="#" class="lgs-nav__link">
+								<span class="lgs-nav__icon">
+									<img src="img/contacts.svg" alt="">
+								</span>
+								Контакты
+							</a>
+						</li>
+					</ul>
+
+					<div class="lgs-form">
+						<form action="#">
+							<div class="form-field">
+								<input type="text" class="form-input" placeholder="Логин">
+							</div>
+							<div class="form-field">
+								<input type="password" class="form-input" placeholder="Пароль">
+							</div>
+
+							<div class="form-button text-center">
+								<button class="l-btn l-btn--gradient l-btn--lg ttu	">Войти</button>
+								<div class="mt-3"><a href="#" class="lgs-link">Забыли пароль?</a></div>
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="login-wrapper__content scrollbar">
+					<div class="seo-text">
+						<h1>Как работает торговая площадка</h1>
+
+						<p>Сервис SteamBroker.com предоставляет площадку для торговли вещами из сервиса цифровой дистрибуции Steam. На нашей площадке вы можете купить у других пользователей или продать сами любые предметы из Вашего инвентаря, которые возможно передать через торговое предложение Steam. Например, вещи из таких игр как Dota™ 2, Counter Strike: Global Offensive™ (CS:GO), Team Fortress™ 2 (TF 2), Unturned и прочих. А так же возможна продажа коллекционных карточек Steam и даже игр, в виде подарков в инвентаре, которые так же возможно передавать. Вы можете купить вещи за ту цену, которую указывают другие пользователи, что гарантирует отличные цены без лишних наценок.
+							Так же Вы можете использовать наш сайт как магазин для своих предметов. Вы получите персональную ссылку которая будет отображать только Ваши предметы.
+							Наш сервис гарантирует абсолютную безопасность всех сделок. Продавец получает деньги только после принятия Вами купленных вещей. Наша система контролируют точность получения вещей покупателем и выплату денег продавцу.</p>
+						<p>Сервис SteamBroker.com предоставляет площадку для торговли вещами из сервиса цифровой дистрибуции Steam. На нашей площадке вы можете купить у других пользователей или продать сами любые предметы из Вашего инвентаря, которые возможно передать через торговое предложение Steam. Например, вещи из таких игр как Dota™ 2, Counter Strike: Global Offensive™ (CS:GO), Team Fortress™ 2 (TF 2), Unturned и прочих. А так же возможна продажа коллекционных карточек Steam и даже игр, в виде подарков в инвентаре, которые так же возможно передавать. Вы можете купить вещи за ту цену, которую указывают другие пользователи, что гарантирует отличные цены без лишних наценок.
+							Так же Вы можете использовать наш сайт как магазин для своих предметов. Вы получите персональную ссылку которая будет отображать только Ваши предметы.
+							Наш сервис гарантирует абсолютную безопасность всех сделок. Продавец получает деньги только после принятия Вами купленных вещей. Наша система контролируют точность получения вещей покупателем и выплату денег продавцу.</p>
+					</div>
+				</div>
+
+			</div>
+
+		</main>
+		<!-- MAIN EOF   -->
+
+	</div>
+	<!-- main wrapper EOF   -->
+
+	@@include('./template/_js.html', {})
+</body>
+
+</html>
