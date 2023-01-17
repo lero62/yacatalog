@@ -1,4 +1,4 @@
-$form-height: rem(59)
+$form-height: 44px
 $form-size: rem(16)
 $form-weight: 500
 $form-color: $color
@@ -25,7 +25,7 @@ $checkWidth: rem(18)
 		display: block
 		width: 100%
 		height: $form-height
-		padding: 0 rem(30)
+		padding: 0 20px
 		color: $form-color
 		font: $form-weight $form-size $font-family, Arial, sans-serif
 		line-height: normal
@@ -40,6 +40,9 @@ $checkWidth: rem(18)
 			color: $form-placeholder
 			transition: opacity 0.2s linear
 
+		&--lg
+			height: 59px
+			padding: 0 30px
 		&._error
 			border-color: red
 		&._valid
@@ -53,11 +56,12 @@ $checkWidth: rem(18)
 
 textarea.form-input
 	height: auto
-	min-height: rem(150)
-	padding-top: rem(18)
-	padding-bottom: rem(18)
+	min-height: 185px
+	padding-top: 12px
+	padding-bottom: 12px
 	resize: none
 	overflow: auto
+	border-radius: 15px
 
 label
 	display: block
@@ -65,6 +69,21 @@ label
 	padding-left: 30px
 	font-size: 14px
 	font-weight: 500
+
+label.l-label
+	margin-bottom: 12px
+	font-size: 16px
+	font-weight: 500
+	color: $color
+	padding-left: 0
+
+.l-form-label
+
+	font-size: 14px !important
+	font-weight: 500 !important
+	color: $color-default !important
+	&.align-items-start
+		padding-top: 12px !important
 
 /* Checkbox  ======================================= */
 .checkbox, .radio
@@ -123,44 +142,24 @@ label
 		background: $form-bg
 		position: relative
 
-	&__legend
-		color: #aaa
-		// top: 0
-		// left: 1.2rem
-		// font-size: 1.6rem
-		// line-height: $form-height - .2rem
-		// color: #000
-		// position: absolute
-		// z-index: 2
-		// +text-overflow
-
-		// max-width: calc(100% - 2.4rem)
-		// pointer-events: none
-		// padding: 0 .3rem
-		// transition: all 0.1s linear
-		// letter-spacing: 0.01rem
-
 	&__text
 
 		flex: 1
 		min-width: 1px
-		padding: 0 rem(13)
+		padding: 0 20px
 		max-width: 100%
 		+text-overflow
 		font: $form-weight $form-size $font-family, Arial, sans-serif
 		color: $form-color
-		line-height: $form-height - rem(2)
+		line-height: $form-height
 
 	&__caret
 		display: flex
 		align-items: center
 		flex: none
-		margin-right: rem(13)
-		font-size: 0
-		&:after
-			content: ''
-			display: block
-			+arr(rem(10),rem(8),#aaa, b)
+		width: 40px
+		margin-right: 5px
+		background: url('../img/selecbox-arrow.svg') no-repeat center
 
 	&__drop
 		display: none
