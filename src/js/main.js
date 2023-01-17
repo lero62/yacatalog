@@ -70,6 +70,14 @@ $(function () {
 
 		$(this).prop("value", val);
 	});
+
+	// Cabinet menu 
+
+
+	$('._toggle-cw-menu').on('click', function () {
+		$('._cw-menu').slideToggle(200);
+
+	})
 	// Сatalog menu 
 
 	$('#navbar-catalog').on('show.bs.offcanvas', function () {
@@ -82,10 +90,6 @@ $(function () {
 		$('.header').removeClass('_active')
 		$('[data-bs-target="#navbar-catalog"]').removeClass('_active')
 		$('body').removeClass('backdrop_catalog')
-		$('[data-catalog]').removeClass('_active');
-		$('[data-catalog-target]').closest('li').removeClass('_active');
-
-
 	})
 
 	$('[data-catalog-target]').on('click', function () {
@@ -101,6 +105,7 @@ $(function () {
 		$('[data-catalog]').removeClass('_active');
 		$('[data-catalog-target]').closest('li').removeClass('_active');
 	})
+
 
 
 	@@include('./blocks/sliders.js')

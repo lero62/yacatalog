@@ -83,6 +83,10 @@
 
 /* Products */
 /* --------------------------------------------------------------- */
+.products-swiper
+	margin: -2px
+	padding: 2px
+
 .product-card
 	border: 1px solid rgba(214, 226, 228, 0.8)
 	height: 100%
@@ -236,8 +240,9 @@
 		margin-right: -15px !important
 		padding-left: 15px !important
 		padding-right: 15px !important
+		height: 290px
 		.swiper-slide
-			width: 110px !important
+			height: calc((100% - 10px) / 2) !important
 
 	.cat-box
 		&__icon
@@ -248,6 +253,7 @@
 		&__title
 			font-size: 12px
 			line-height: 1.2
+			+text-overflow
 
 /* Mobile =========================*/
 +min($iphone + 1)
@@ -269,9 +275,7 @@
 	.section-categories
 		padding: 15px 0
 	.categories-swiper
-
-		.swiper-slide
-			width: 90px !important
+		height: 230px
 
 	.cat-box
 		&__icon

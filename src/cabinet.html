@@ -10,15 +10,24 @@
 	<div class="main-wrapper">
 		<!-- BEGIN MAIN -->
 		<main class="main">
-			<div class=" cabinet-wrapper	d-lg-flex">
+			<div class="cabinet-wrapper d-lg-flex">
 
 				<div class="cabinet-wrapper__side cw scrollbar">
-
-					<div class="cw-logo ">
-						<span class="color-danger">Я</span>Каталог
+					<div class="cw-header">
+						<div class="cw-header__burger _toggle-cw-menu">
+							<svg class="icon icon-menu">
+								<use xlink:href="img/sprite.svg#menu"></use>
+							</svg>
+							<svg class="icon icon-close">
+								<use xlink:href="img/sprite.svg#close"></use>
+							</svg>
+						</div>
+						<div class="cw-logo ">
+							<span class="color-danger">Я</span>Каталог
+						</div>
 					</div>
 
-					<ul class="cw-nav d-lg-block d-none">
+					<ul class="cw-nav _cw-menu">
 						<li class="cw-nav__item">
 							<a href="#" class="cw-nav__link _active">
 								<span class="cw-nav__icon">
@@ -92,7 +101,7 @@
 							</div>
 						</div>
 
-						<ul class="cwt-menu">
+						<ul class="cwt-menu" data-da="cw-header, 1, 991 ">
 							<li class="cwt-menu__item">
 								<a href="#" class="cwt-menu__link">
 									<div class="cwt-menu__icon">
@@ -104,113 +113,143 @@
 								</a>
 							</li>
 							<li class="cwt-menu__item">
-								<a href="#" class="cwt-menu__link">Выход</a>
+								<a href="#" class="cwt-menu__link">
+									<div class="cwt-menu__icon">
+										<svg class="icon icon-out">
+											<use xlink:href="img/sprite.svg#out"></use>
+										</svg>
+
+									</div>
+								</a>
 							</li>
 						</ul>
 					</div>
+
 					<div class="cabinet-wrapper__middle scrollbar">
 						<h1 class="cwm-title">Настройки магазина</h1>
 						<form action="#" class="settings-form">
-
-
-							<div class="row mb-3">
-								<label class="col-sm-3 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Логин</label>
-								<div class="col-sm-4">
-									<input type="text" class="form-input" value="shoper">
-								</div>
-							</div>
-							<div class="row mb-3">
-								<label class="col-sm-3 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Контактное лицо</label>
-								<div class="col-sm-4">
-									<input type="text" class="form-input" value="Валентина">
-								</div>
-							</div>
-							<div class="row mb-3">
-								<label class="col-sm-3 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Skype</label>
-								<div class="col-sm-4">
-									<input type="text" class="form-input" value="sky">
-								</div>
-							</div>
-							<div class="row mb-3">
-								<label class="col-sm-3 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Контактный телефон</label>
-								<div class="col-sm-4">
-									<input type="tel" class="form-input" value="+7 (495) 145-64-05 ">
-								</div>
-							</div>
-							<div class="row mb-3">
-								<label class="col-sm-3 col-form-label l-form-label d-flex align-items-start justify-content-md-end">Реквизиты </label>
-								<div class="col-sm-4">
-									<textarea class="form-input">реквизиты</textarea>
-								</div>
-							</div>
-
-							<div class="row mt-4">
-
-								<div class="col-sm-4 offset-sm-3">
-									<label class="l-label">Сменить пароль</label>
-								</div>
-							</div>
-
-							<div class="row mb-3">
-								<label class="col-sm-3 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Введите пароль</label>
-								<div class="col-sm-4">
-									<input type="password" class="form-input" value="sky">
-								</div>
-							</div>
-
-							<div class="row mb-3">
-								<label class="col-sm-3 col-form-label l-form-label d-flex align-items-center justify-content-md-end">повторите пароль</label>
-								<div class="col-sm-4">
-									<input type="password" class="form-input" value="sky">
-								</div>
-							</div>
-
-							<div class="row mt-4">
-
-								<div class="col-sm-9 offset-sm-3">
-									<label class="l-label">География размещения и показов товарных позиций</label>
-									<div class="row">
-										<div class="col-md-6">
-											<div class="selectbox" data-selectbox>
-												<div class="selectbox__head" data-selectbox-head>
-													<div class="selectbox__text" data-selectbox-title>Выбрать регионы</div>
-													<div class="selectbox__caret"></div>
-												</div>
-												<div class="selectbox__drop">
-													<ul>
-														<li></li>
-														<li></li>
-														<li></li>
-													</ul>
-												</div>
-											</div>
+							<div class="row g-xl-5 g-4">
+								<div class="col-xl-4 order-xl-1 offset-xl-0 offset-md-4">
+									<div class="load">
+										<div class="load__img mb-2">
+											<img src="img/image1.png" alt="">
 										</div>
-										<div class="col-md-6">
-											<div class="selectbox" data-selectbox>
-												<div class="selectbox__head" data-selectbox-head>
-													<div class="selectbox__text" data-selectbox-title>Выбрать регионы </div>
-													<div class="selectbox__caret"></div>
-												</div>
-												<div class="selectbox__drop">
-													<ul>
-														<li></li>
-														<li></li>
-														<li></li>
-													</ul>
-												</div>
-											</div>
+										<a href="#" class="link link--default">Сменить логотип</a>
+									</div>
+								</div>
+								<div class="col-xl-8">
+									<div class="row mb-3">
+										<label class="col-xl-5 col-md-4 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Логин</label>
+										<div class="col-xl-7 col-md-8">
+											<input type="text" class="form-input" value="shoper">
+										</div>
+									</div>
+									<div class="row mb-3">
+										<label class="col-xl-5 col-md-4 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Контактное лицо</label>
+										<div class="col-xl-7 col-md-8">
+											<input type="text" class="form-input" value="Валентина">
+										</div>
+									</div>
+									<div class="row mb-3">
+										<label class="col-xl-5 col-md-4 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Skype</label>
+										<div class="col-xl-7 col-md-8">
+											<input type="text" class="form-input" value="sky">
+										</div>
+									</div>
+									<div class="row mb-3">
+										<label class="col-xl-5 col-md-4 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Контактный телефон</label>
+										<div class="col-xl-7 col-md-8">
+											<input type="tel" class="form-input" value="+7 (495) 145-64-05 ">
+										</div>
+									</div>
+									<div class="row mb-3">
+										<label class="col-xl-5 col-md-4 col-form-label l-form-label d-flex align-items-start justify-content-md-end">Реквизиты </label>
+										<div class="col-xl-7 col-md-8">
+											<textarea class="form-input">реквизиты</textarea>
 										</div>
 									</div>
 
-									<div class="form-button">
-										<button type="submit" class="l-btn l-btn--gradient l-btn--lg">Cохранить</button>
+									<div class="row mt-4">
+
+										<div class="col-xl-7 col-md-8 offset-xl-5 offset-md-4">
+											<label class="l-label">Сменить пароль</label>
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<label class="col-xl-5 col-md-4 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Введите пароль</label>
+										<div class="col-xl-7 col-md-8">
+											<input type="password" class="form-input" value="sky">
+										</div>
+									</div>
+
+									<div class="row mb-3">
+										<label class="col-xl-5 col-md-4 col-form-label l-form-label d-flex align-items-center justify-content-md-end">Повторите пароль</label>
+										<div class="col-xl-7 col-md-8">
+											<input type="password" class="form-input" value="sky">
+										</div>
+									</div>
+
+									<div class="row mt-4">
+
+										<div class="col-xl-7 col-md-8 offset-xl-5 offset-md-4">
+											<label class="l-label">География размещения и показов товарных позиций</label>
+											<div class="row mb-3">
+												<div class="selectbox" data-selectbox>
+													<div class="selectbox__head" data-selectbox-head>
+														<div class="selectbox__text" data-selectbox-title>Выбрать регионы</div>
+														<div class="selectbox__caret"></div>
+													</div>
+													<div class="selectbox__drop">
+														<ul>
+															<li></li>
+															<li></li>
+															<li></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+											<div class="row mb-3">
+												<div class="selectbox" data-selectbox>
+													<div class="selectbox__head" data-selectbox-head>
+														<div class="selectbox__text" data-selectbox-title>Выбрать регионы </div>
+														<div class="selectbox__caret"></div>
+													</div>
+													<div class="selectbox__drop">
+														<ul>
+															<li></li>
+															<li></li>
+															<li></li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+											<div class="form-button">
+												<button type="submit" class="l-btn l-btn--gradient l-btn--lg">Cохранить</button>
+											</div>
+										</div>
+
+
 									</div>
 								</div>
+
 							</div>
-
-
 						</form>
+					</div>
+				</div>
 
+			</div>
+
+			<div class="chat">
+				<div class="chat__user">
+					<div class="chat__user-img">
+						<img src="img/user.png" alt="">
+					</div>
+					<div class="chat-user__content">
+						<div class="chat__user__name">Сергей</div>
+						<div class="status">Online</div>
 					</div>
 				</div>
 			</div>

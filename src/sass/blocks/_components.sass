@@ -316,73 +316,17 @@
 			background: $color
 			top: 19px
 
-/* loader */
+/* Swiper */
 /* --------------------------------------------------------------- */
-.loaded .main-wrapper
-	visibility: hidden
-	opacity: 0
-	transition: opacity 0.3s
-.loaded .icon-load
-	display: flex
-.icon-load
-	position: fixed
-	top: 0
-	left: 0
-	right: 0
-	bottom: 0
-	z-index: 1045
-	display: none
-	justify-content: center
-	align-items: center
-	width: auto
-	background: #fff
+.swiper-pagination
+	position: static !important
+	margin-top: 20px
 
-.ball
-	width: rem(30)
-	height: rem(30)
-	border-radius: rem(15)
-	background: white
-	opacity: 0.3
+.swiper-pagination-bullet-active
+	background: $color-danger !important
 
-.a
-	margin-right: rem(10)
-	animation: ball-a 0.7s ease-out 0s infinite alternate
-
-.b
-	margin-right: rem(10)
-	animation: ball-b 0.7s ease-out 0.2s infinite alternate
-.c
-	animation: ball-c 0.7s ease-out 0.4s infinite alternate
-
-@keyframes ball-a
-	from
-		height: rem(20)
-		opacity: 0.3
-		background: #fff
-	to
-		height: rem(70)
-		opacity: 1
-		background: rgba(#929FB2, 0.2)
-
-@keyframes ball-b
-	from
-		height: rem(20)
-		opacity: 0.3
-		background: #fff
-	to
-		height: rem(65)
-		opacity: 1
-		background: #929FB2
-
-@keyframes ball-c
-	from
-		height: rem(20)
-		opacity: 0.3
-		background: #fff
-	to
-		height: rem(60)
-		opacity: 1
-		background: darken(#1C466C, 6%)
+// .swiper-grid-column>.swiper-wrapper
+// 	flex-direction: row !important
 
 /* Media */
 /* --------------------------------------------------------------- */

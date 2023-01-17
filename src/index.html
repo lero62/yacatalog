@@ -198,36 +198,47 @@
 						<h2 class="section__title">Ранее вы смотрели</h2>
 					</div>
 
-					<div class="row g-md-4 g-sm-3 g-2">
-						<div class="col-lg-3 col-md-4 col-6">
-							@@include('./template/blocks/product_card.html', {
-							img: '../img/product-card-img.jpg',
-							title: 'OLLIN Professional Кондиционер',
-							price_value: 'от 430 руб.',
-							})
+					<div class="swiper products-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								@@include('./template/blocks/product_card.html', {
+								img: '../img/product-card-img.jpg',
+								title: 'OLLIN Professional Кондиционер',
+								price_value: 'от 430 руб.',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('./template/blocks/product_card.html', {
+								img: '../img/product-card-img.jpg',
+								title: 'OLLIN Professional Кондиционер',
+								price_value: 'от 430 руб.',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('./template/blocks/product_card.html', {
+								img: '../img/product-card-img.jpg',
+								title: 'OLLIN Professional Кондиционер',
+								price_value: 'от 430 руб.',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('./template/blocks/product_card.html', {
+								img: '../img/product-card-img.jpg',
+								title: 'OLLIN Professional Кондиционер',
+								price_value: 'от 430 руб.',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('./template/blocks/product_card.html', {
+								img: '../img/product-card-img.jpg',
+								title: 'OLLIN Professional Кондиционер',
+								price_value: 'от 430 руб.',
+								})
+							</div>
 						</div>
-						<div class="col-lg-3 col-md-4 col-6">
-							@@include('./template/blocks/product_card.html', {
-							img: '../img/product-card-img.jpg',
-							title: 'OLLIN Professional Кондиционер двойное увлажнение',
-							price_value: 'от 430 руб.',
-							})
-						</div>
-						<div class="col-lg-3 col-md-4 col-6 d-md-block d-none">
-							@@include('./template/blocks/product_card.html', {
-							img: '../img/product-card-img.jpg',
-							title: 'OLLIN Professional Кондиционер двойное увлажнение',
-							price_value: 'от 430 руб.',
-							})
-						</div>
-						<div class="col-lg-3 col-md-4 col-6 d-lg-block d-none">
-							@@include('./template/blocks/product_card.html', {
-							img: '../img/product-card-img.jpg',
-							title: 'OLLIN Professional Кондиционер двойное увлажнение',
-							price_value: 'от 430 руб.',
-							})
-						</div>
+						<div class="swiper-pagination"></div>
 					</div>
+
 				</div>
 			</section>
 
@@ -237,36 +248,47 @@
 						<h2 class="section__title">Статьи, обзоры, рекомендации</h2>
 					</div>
 
-					<div class="row gy-4 gx-md-4 gx-sm-3 ">
-						<div class="col-lg-3 col-md-4 col-sm-6 ">
-							@@include('./template/blocks/article_card.html', {
-							img: '../img/article_card-img-1.jpg',
-							date: '10.01.2023',
-							title: '10 лучших комнатных растений, наполняющих дом кислородом наполняющих дом',
-							})
+					<div class="swiper articles-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								@@include('./template/blocks/article_card.html', {
+								img: '../img/article_card-img-1.jpg',
+								date: '10.01.2023',
+								title: '10 лучших комнатных растений, наполняющих дом кислородом наполняющих дом',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('./template/blocks/article_card.html', {
+								img: '../img/article_card-img-2.jpg',
+								date: '10.01.2023',
+								title: '10 лучших комнатных растений, наполняющих дом кислородом',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('./template/blocks/article_card.html', {
+								img: '../img/article_card-img-3.jpg',
+								date: '10.01.2023',
+								title: '7 лучших электронных книг 2021 года',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('./template/blocks/article_card.html', {
+								img: '../img/article_card-img-2.jpg',
+								date: '10.01.2023',
+								title: '10 лучших комнатных растений, наполняющих дом кислородом',
+								})
+							</div>
+							<div class="swiper-slide">
+								@@include('./template/blocks/article_card.html', {
+								img: '../img/article_card-img-3.jpg',
+								date: '10.01.2023',
+								title: '7 лучших электронных книг 2021 года',
+								})
+							</div>
 						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 ">
-							@@include('./template/blocks/article_card.html', {
-							img: '../img/article_card-img-2.jpg',
-							date: '10.01.2023',
-							title: '10 лучших комнатных растений, наполняющих дом кислородом',
-							})
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 d-md-block d-none">
-							@@include('./template/blocks/article_card.html', {
-							img: '../img/article_card-img-3.jpg',
-							date: '10.01.2023',
-							title: '7 лучших электронных книг 2021 года',
-							})
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6 d-lg-block d-none">
-							@@include('./template/blocks/article_card.html', {
-							img: '../img/article_card-img-2.jpg',
-							date: '10.01.2023',
-							title: '10 лучших комнатных растений, наполняющих дом кислородом',
-							})
-						</div>
+						<div class="swiper-pagination"></div>
 					</div>
+
 				</div>
 			</section>
 

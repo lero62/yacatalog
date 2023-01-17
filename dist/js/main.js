@@ -70,6 +70,14 @@ $(function () {
 
 		$(this).prop("value", val);
 	});
+
+	// Cabinet menu 
+
+
+	$('._toggle-cw-menu').on('click', function () {
+		$('._cw-menu').slideToggle(200);
+
+	})
 	// Сatalog menu 
 
 	$('#navbar-catalog').on('show.bs.offcanvas', function () {
@@ -82,10 +90,6 @@ $(function () {
 		$('.header').removeClass('_active')
 		$('[data-bs-target="#navbar-catalog"]').removeClass('_active')
 		$('body').removeClass('backdrop_catalog')
-		$('[data-catalog]').removeClass('_active');
-		$('[data-catalog-target]').closest('li').removeClass('_active');
-
-
 	})
 
 	$('[data-catalog-target]').on('click', function () {
@@ -103,46 +107,8 @@ $(function () {
 	})
 
 
-	// if (document.querySelector('.cards-swiper')) {
-// 	new Swiper('.cards-swiper ', {
 
-// 		loop: false,
-// 		slidesPerView: 1,
-// 		spaceBetween: 10,
-// 		watchOverflow: true,
-// 		watchSlidesVisibility: true,
-// 		watchSlidesProgress: true,
-// 		navigation: {
-// 			nextEl: '.cards-swiper-next',
-// 			prevEl: '.cards-swiper-prev',
-// 		},
-// 		breakpoints: {
-// 			100: {
-// 				slidesPerView: 2,
-// 				spaceBetween: 6,
-// 			},
-// 			575: {
-// 				slidesPerView: 2,
-// 				spaceBetween: 10,
-// 			},
-
-// 			768: {
-// 				slidesPerView: 3,
-
-
-// 			},
-// 			1025: {
-// 				slidesPerView: 4,
-
-// 			},
-// 			1300: {
-// 				slidesPerView: 1,
-
-// 			},
-// 		}
-
-// 	})
-// };
+	
 
 if (document.querySelector('.categories-swiper')) {
 	var breakpoint = window.matchMedia('(min-width: 992px)');
@@ -163,11 +129,27 @@ if (document.querySelector('.categories-swiper')) {
 	var enableSwiper = function () {
 		categoriesSwiper = new Swiper('.categories-swiper', {
 			loop: false,
-			slidesPerView: 'auto',
+			slidesPerView: 4,
+
+			grid: {
+				rows: 2,
+			},
 			spaceBetween: 10,
-			watchOverflow: true,
-			watchSlidesVisibility: true,
-			watchSlidesProgress: true,
+			breakpoints: {
+				100: {
+					grid: {
+						rows: 2,
+					},
+					slidesPerView: 3,
+				},
+
+				576: {
+					grid: {
+						rows: 2,
+					},
+					slidesPerView: 4,
+				},
+			}
 		});
 
 	};
@@ -228,6 +210,84 @@ if (document.querySelector('.card-swiper')) {
 
 	});
 }
+
+if (document.querySelector('.products-swiper')) {
+	new Swiper('.products-swiper ', {
+
+		loop: false,
+		slidesPerView: 4,
+		spaceBetween: 30,
+		watchOverflow: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		breakpoints: {
+			100: {
+				slidesPerView: 2,
+				spaceBetween: 6,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 16,
+			},
+
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+
+			},
+			1025: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+
+		}
+
+	})
+};
+
+if (document.querySelector('.articles-swiper')) {
+	new Swiper('.articles-swiper ', {
+
+		loop: false,
+		slidesPerView: 4,
+		spaceBetween: 30,
+		watchOverflow: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		breakpoints: {
+			100: {
+				slidesPerView: 1,
+				spaceBetween: 6,
+			},
+			575: {
+				slidesPerView: 2,
+				spaceBetween: 16,
+			},
+
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+
+			},
+			1025: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+
+		}
+
+	})
+};
 
 	// 
 const selectboxHeads = document.querySelectorAll('[data-selectbox-head]');

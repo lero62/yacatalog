@@ -228,11 +228,12 @@
 	padding: 0
 	&__item
 		margin-bottom: 2px
-		&._active
-			.nc-nav__link
-				color: $color-danger
-				&:after
-					opacity: 1
+		&-dropdown
+			&._active
+				.nc-nav__link
+					color: $color-danger
+					&:after
+						opacity: 1
 	&__link
 		display: block
 		padding: 10px 20px
